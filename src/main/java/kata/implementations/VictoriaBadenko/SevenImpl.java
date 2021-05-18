@@ -36,3 +36,5 @@ public class SevenImpl implements Seven {
         return count;
     }
 }
+
+
