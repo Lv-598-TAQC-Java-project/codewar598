@@ -4,11 +4,15 @@ import kata.Eight;
 
 public class EightImpl implements Eight {
     public int liters(double time) {
-        return 0;
+        double liters = 0.5f;
+        liters=(liters*time) - (liters*time)%1;
+        int result=(int)liters;
+        return result;
     }
 
     public double getVolumeOfCuboid(double length, double width, double height) {
-        return 0;
+        double volumeofcuboid = length *width *height;
+        return volumeofcuboid;
     }
 
     public float mpgToKPM(float mpg) {
