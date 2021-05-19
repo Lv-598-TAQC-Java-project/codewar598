@@ -1,4 +1,4 @@
-package kata.inplementations.DmytroNahornyy;
+package kata.implementations.DmytroNahornyy;
 
 import kata.Eight;
 
