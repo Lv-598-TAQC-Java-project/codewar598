@@ -29,21 +29,20 @@ public class SevenImpl implements Seven {
 
     public int whereIsHe(int p, int bef, int aft) {
         int count = 0;
-        int beforeVasya = bef;
-        for (int i = aft; i <= (p - 1); i++) {
-            if (beforeVasya + i == (p - 1)) {
+        while (bef >= 0 && aft <= (p - 1)) {
+            if (bef + aft > (p - 1)) {
+                bef--;
+            } else if (bef + aft < (p - 1)) {
+                aft++;
+            } else {
                 count++;
-                beforeVasya--;
-            } else if(beforeVasya + i > (p - 1)) {
-                beforeVasya--;
-                i = aft - 1;
-            }
-            else {
-                continue;
+                bef--;
+                aft++;
             }
         }
         return count;
     }
+
 
 
 }

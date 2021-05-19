@@ -47,22 +47,29 @@ public class Menu {
                     System.out.println("Enter id of user:");
                     int idStudent = sc.readInt();
                     setStudent(idStudent);
+                case 3:
+                    showTasks();
+                    break;
+                case 4:
+                    System.out.println("Enter number of task:");
+                    int numberOfTask = sc.readInt();
+                    setTask(numberOfTask);
+
             }
         }
     }
 
-    public void setTask() {
-        int numberOfTask;
+    public void setTask(int numberOfTask) {
+
         switch (sc.readInt())
         {
             case 1:
                 runner.runTaskOne();
 
-
         }
     }
 
-    public Eight setStudent(int id) {
+    public void setStudent(int id) {
 
         switch (id) {
             case 1:
