@@ -12,14 +12,27 @@ public class SevenImpl implements Seven{
 
 	@Override
 	public String seriesSum(int n) {
-		// TODO Auto-generated method stub
-		return null;
+		String res;
+	    double result=0;
+	    double dod = 0;
+	    for(int i=1; i<=n; i++){
+								dod= 1/(1+(i-1)*3d);
+								result += dod;
+		        }
+		        
+				res = String.format("%.2f", result);	    
+				return res;
 	}
 
 	@Override
 	public int whereIsHe(int p, int bef, int aft) {
-		// TODO Auto-generated method stub
-		return 0;
+		  int result =0;
+	      for (int i = 1; i <= p; i++){
+	        if ((bef<i)&&((p-aft)<=i)){
+	          result++;
+	        }
+	      }return result;
+	
 	}
 
 	
