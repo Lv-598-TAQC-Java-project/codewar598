@@ -1,8 +1,7 @@
 package kata.implementations.ElviraStepaniuk;
 
-import kata.Eight;
-
 import java.util.Arrays;
+import kata.Eight;
 
 public class EightImpl implements Eight {
     @Override
@@ -58,7 +57,7 @@ public class EightImpl implements Eight {
 
     @Override
     public boolean am_i_wilson(double n) {
-        return false;
+        return n==5 || n==13 || n==563;
     }
 
     @Override

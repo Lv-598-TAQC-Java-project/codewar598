@@ -1,6 +1,7 @@
 package util;
 
 import kata.Eight;
+import kata.implementations.ElviraStepaniuk.EightImpl;
 import kata.implementations.OrestTorskyi.EightImpl;
 
 public class Runner {
