@@ -1,26 +1,26 @@
 package util;
 
 public enum UserNames {
-    OREST(1L, "Orest"),
-    ALONA(2L, "Alona" ),
-    OKSANA(3L, "Oksana" ),
-    OSTAP(4L, "Ostap"),
-    DMYTRO(5L, "Dmytro"),
-    VIKTORIA(6L, "Viktoria"),
-    ELVIRA(7L, "Elvira"),
-    VIKTORIASKIKUN(8L, "ViktoriaSkikun");
+    OREST(1, "Orest"),
+    ALONA(2, "Alona" ),
+    OKSANA(3, "Oksana" ),
+    OSTAP(4, "Ostap"),
+    DMYTRO(5, "Dmytro"),
+    VIKTORIA(6, "Viktoria"),
+    ELVIRA(7, "Elvira"),
+    VIKTORIASKIKUN(8, "ViktoriaSkikun");
 
 
 
-    private final Long id;
+    private final Integer id;
     private final String studentName;
 
-    UserNames(long id, String studentName) {
+    UserNames(int id, String studentName) {
         this.id = id;
         this.studentName = studentName;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -28,7 +28,7 @@ public enum UserNames {
         return studentName;
     }
 
-    public static UserNames getById(Long id) {
+    public static UserNames getById(int id) {
         for (UserNames user : values()) {
             if (user.id.equals(id)) {
                 return user;

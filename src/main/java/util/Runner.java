@@ -1,8 +1,7 @@
 package util;
 
 import kata.Eight;
-import kata.implementations.ElviraStepaniuk.EightImpl;
-import kata.implementations.OrestTorskyi.EightImpl;
+
 
 public class Runner {
     private Eight impl8;
@@ -13,7 +12,8 @@ public class Runner {
         switch(user)
         {
             case OREST:
-                impl8 = new EightImpl();
+                impl8 = new kata.implementations.OrestTorskyi.EightImpl();
+
         }
 
     }
