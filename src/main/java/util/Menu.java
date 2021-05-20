@@ -40,14 +40,21 @@ public class Menu {
                     System.out.println("Enter id of user:");
                     int idStudent = sc.readInt();
                     setStudent(idStudent);
+                case 3:
+                    showTasks();
+                    break;
+                case 4:
+                    System.out.println("Enter number of task:");
+                    int numberOfTask = sc.readInt();
+                    runTask(numberOfTask);
+
             }
         }
     }
 
 
-    public void setTask() {
-        int numberOfTask;
-        switch (sc.readInt()) {
+    public void runTask(int task) {
+        switch (task) {
             case 1:
                 runner.runTaskOne();
             case 2:
@@ -122,11 +129,8 @@ public class Menu {
         }
     }
 
-
     public void setStudent(int id) {
         runner = new Runner(UserNames.getById(id));
 
     }
 }
-
-
