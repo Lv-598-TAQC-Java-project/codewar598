@@ -53,20 +53,104 @@ public class Menu {
 
     public void setTask() {
         int numberOfTask;
-        switch (sc.readInt())
-        {
+        switch (sc.readInt()) {
             case 1:
                 runner.runTaskOne();
-
-
+            case 2:
+                runner.runTask2();
+                break;
+            case 3:
+                runner.runTask3();
+                break;
+            case 4:
+                runner.runTask4();
+                break;
+            case 5:
+                runner.runTask5();
+                break;
+            case 6:
+                runner.runTask6();
+                break;
+            case 7:
+                runner.runTask7();
+                break;
+            case 8:
+                runner.runTask8();
+                break;
+            case 9:
+                runner.runTask9();
+                break;
+            case 10:
+                runner.runTask10();
+                break;
+            case 11:
+                runner.runTask11();
+                break;
+            case 12:
+                runner.runTask12();
+                break;
+            case 13:
+                runner.runTask13();
+                break;
+            case 14:
+                runner.runTask14();
+                break;
+            case 15:
+                runner.runTask15();
+                break;
+            case 16:
+                runner.runTask16();
+                break;
+            case 17:
+                runner.runTask17();
+                break;
+            case 18:
+                runner.runTask18();
+                break;
+            case 19:
+                runner.runTask19();
+                break;
+            case 20:
+                runner.runTask20();
+                break;
+            case 21:
+                runner.runTask21();
+                break;
+            case 22:
+                runner.runTask22();
+                break;
+            case 23:
+                runner.runTask23();
+                break;
+            case 24:
+                runner.runTask24();
+                break;
         }
-    }
 
-    public Eight setStudent(int id) {
 
-        switch (id) {
-            case 1:
-                runner = new Runner(UserNames.OREST);
+        public Eight setStudent (int id){
+
+            switch (id) {
+                case 1:
+                    runner = new Runner(UserNames.OREST);
+                case 2:
+                    runner = new Runner(UserNames.ALONA);
+                case 3:
+                    runner = new Runner(UserNames.OKSANA);
+                case 4:
+                    runner = new Runner(UserNames.OSTAP);
+                case 5:
+                    runner = new Runner(UserNames.DMYTRO);
+                case 6:
+                    runner = new Runner(UserNames.VIKTORIA);
+                case 7:
+                    runner = new Runner(UserNames.ELVIRA);
+                case 8:
+                    runner = new Runner(UserNames.VIKTORIASKIKUN);
+
+            }
         }
     }
 }
+
+
