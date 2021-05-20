@@ -14,11 +14,7 @@ public class SixImpl implements Six {
             count += Math.pow(i, 3);
             i++;
         }
-        if (count == m) {
-            return (i - 1);
-        } else {
-            return -1;
-        }
+        return count == m ? i - 1 : -1;
     }
 
     public String balance(String book) {
