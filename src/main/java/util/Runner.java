@@ -13,6 +13,22 @@ public class Runner {
         {
             case OREST:
                 impl8 = new kata.implementations.OrestTorskyi.EightImpl();
+            case ALONA:
+                impl8 = new kata.implementations.AlonaLutsenko.EightImpl();
+            case OKSANA:
+
+            case OSTAP:
+
+            case DMYTRO:
+                impl8 = new kata.implementations.DmytroNahornyy.EightImpl();
+            case VIKTORIA:
+                impl8 = new kata.implementations.VictoriaBadenko.EightImpl();
+            case ELVIRA:
+                impl8 = new kata.implementations.ElviraStepaniuk.EightImpl();
+            case VIKTORIASKIKUN:
+
+
+
 
         }
 
