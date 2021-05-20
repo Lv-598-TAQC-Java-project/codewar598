@@ -38,7 +38,7 @@ public class ConsoleScanner implements Scanner {
         int[] array = new int[readInt()];
         for (int i = 0; i < array.length; i++) {
             System.out.println("Enter element №" + (i + 1));
-           array[i] = readInt();
+            array[i] = readInt();
         }
         return array;
     }

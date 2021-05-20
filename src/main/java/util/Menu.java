@@ -1,15 +1,8 @@
 package util;
 
-import kata.Eight;
-import kata.implementations.OrestTorskyi.EightImpl;
-import util.ConsoleScanner;
-import util.Runner;
-import util.Scanner;
-import util.UserNames;
-
 public class Menu {
 
-    private Scanner sc = new ConsoleScanner();
+    private final Scanner sc = new ConsoleScanner();
     private Runner runner;
 
     public void showStudentList() {
@@ -50,6 +43,7 @@ public class Menu {
             }
         }
     }
+
 
     public void setTask() {
         int numberOfTask;
@@ -126,30 +120,12 @@ public class Menu {
                 runner.runTask24();
                 break;
         }
+    }
 
 
-        public Eight setStudent (int id){
+    public void setStudent(int id) {
+        runner = new Runner(UserNames.getById(id));
 
-            switch (id) {
-                case 1:
-                    runner = new Runner(UserNames.OREST);
-                case 2:
-                    runner = new Runner(UserNames.ALONA);
-                case 3:
-                    runner = new Runner(UserNames.OKSANA);
-                case 4:
-                    runner = new Runner(UserNames.OSTAP);
-                case 5:
-                    runner = new Runner(UserNames.DMYTRO);
-                case 6:
-                    runner = new Runner(UserNames.VIKTORIA);
-                case 7:
-                    runner = new Runner(UserNames.ELVIRA);
-                case 8:
-                    runner = new Runner(UserNames.VIKTORIASKIKUN);
-
-            }
-        }
     }
 }
 
