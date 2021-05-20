@@ -1,7 +1,16 @@
 package util;
 
 public enum UserNames {
-    OREST(1L, "Orest");
+    OREST(1L, "Orest"),
+    ALONA(2L, "Alona" ),
+    OKSANA(3L, "Oksana" ),
+    OSTAP(4L, "Ostap"),
+    DMYTRO(5L, "Dmytro"),
+    VIKTORIA(6L, "Viktoria"),
+    ELVIRA(7L, "Elvira"),
+    VIKTORIASKIKUN(8L, "ViktoriaSkikun");
+
+
 
     private final Long id;
     private final String studentName;

@@ -25,4 +25,73 @@ public class Runner {
         System.out.println("Result: " + res);
         return res;
     }
+
+    public void runTask2() {
+    }
+
+    public void runTask3() {
+    }
+
+    public void runTask4() {
+    }
+
+    public void runTask5() {
+    }
+
+    public void runTask6() {
+    }
+
+    public void runTask7() {
+    }
+
+    public void runTask8() {
+    }
+
+    public void runTask9() {
+    }
+
+    public void runTask10() {
+    }
+
+    public void runTask11() {
+    }
+
+    public void runTask12() {
+    }
+
+    public void runTask13() {
+    }
+
+    public void runTask14() {
+    }
+
+    public void runTask15() {
+    }
+
+    public void runTask16() {
+    }
+
+    public void runTask17() {
+    }
+
+    public void runTask18() {
+    }
+
+    public void runTask19() {
+    }
+
+    public void runTask20() {
+    }
+
+    public void runTask21() {
+    }
+
+    public void runTask22() {
+    }
+
+    public void runTask23() {
+    }
+
+    public void runTask24() {
+    }
 }
