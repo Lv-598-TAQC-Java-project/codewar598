@@ -1,22 +1,18 @@
-package kata.implementations.OrestTorskyi;
+package kata.implementations.VictoriaBadenko;
 
 import kata.Six;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SixImpl implements Six {
-@Override
+    @Override
     public long findNb(long m) {
-        long count = 0;
-        int i = 1;
-        while (count < m) {
-            count += Math.pow(i, 3);
-            i++;
+        for (int i = 1; i <= m; i++) {
+            m -= (long) Math.pow(i, 3);
+            if (m == 0) return (int) i;
         }
-        return count == m ? i - 1 : -1;
+        return -1;
     }
-@Override
+
+    @Override
     public String balance(String book) {
         return null;
     }
