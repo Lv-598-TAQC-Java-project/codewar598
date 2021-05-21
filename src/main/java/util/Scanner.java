@@ -22,5 +22,4 @@ import java.math.BigInteger;
 
      BigInteger readBigInteger();
 
-     int[] readIntArray();
  }
