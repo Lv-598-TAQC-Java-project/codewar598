@@ -13,7 +13,8 @@ public class Menu {
                 "4. Ostap Nadiak\n" +
                 "5. Dmytro Nahornyy\n" +
                 "6. Elvira Stepaniuk\n" +
-                "7. Orest Torskyi");
+                "7. Orest Torskyi\n"+
+                "8. Viktoria Skikun");
     }
 
     public void showTasks() {
