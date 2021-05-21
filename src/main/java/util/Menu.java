@@ -5,6 +5,41 @@ public class Menu {
     private final Scanner sc = new ConsoleScanner();
     private Runner runner;
 
+    private static Menu instance;
+
+    public static Menu getInstance() {
+        if (instance == null) {
+            instance = new Menu();
+        }
+        return instance;
+    }
+
+    public void run() {
+//        System.out.println(" 0 - exit\n 1 - show user names\n 2 - set user\n 3 - pick method");
+//        Scanner scanner = new ConsoleScanner();
+//        while (true) {
+//            int id = scanner.readInt();
+//            switch (id) {
+//                case 0:
+//
+//                    return;
+//                case 1: {
+//
+//                    break;
+//                }
+//                case 2: {
+//
+//                    break;
+//                }
+//                case 3: {
+//                    runTask();
+//                    break;
+//                }
+//            }
+//            System.out.println(" 0 - exit\n 1 - show user names\n 2 - set user\n 3 - pick method");
+//        }
+    }
+
     public void showStudentList() {
         System.out.println("List of students: \n" +
                 "1. Victoria Badenko\n" +

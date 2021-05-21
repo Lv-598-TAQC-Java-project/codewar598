@@ -4,13 +4,13 @@ import kata.Eight;
 
 
 public class Runner {
+    ConsoleScanner scanner = new ConsoleScanner();
     private Eight impl8;
-    private Scanner sc;
+    private final Scanner sc;
 
     public Runner(UserNames user) {
         sc = new ConsoleScanner();
-        switch(user)
-        {
+        switch (user) {
             case OREST:
                 impl8 = new kata.implementations.OrestTorskyi.EightImpl();
             case ALONA:
@@ -28,8 +28,6 @@ public class Runner {
             case VIKTORIASKIKUN:
 
 
-
-
         }
 
     }
@@ -44,18 +42,56 @@ public class Runner {
     }
 
     public void runTask2() {
+        System.out.println("Running Volume of cuboid:");
+        System.out.println("Enter double number length:");
+        double length = scanner.readDouble();
+        System.out.println("Enter double number width:");
+        double width = scanner.readDouble();
+        System.out.println("Enter double number high:");
+        double high = scanner.readDouble();
+        String res = String.valueOf(impl8.getVolumeOfCuboid(length, width, high));
+        System.out.println(res);
     }
 
     public void runTask3() {
+        System.out.println("Running Miles per gallon to kilometers per liter:");
+        System.out.println("Enter float number:");
+        float input = scanner.readFloat();
+        String res = String.valueOf(impl8.mpgToKPM(input));
+        System.out.println(res);
     }
 
     public void runTask4() {
+        System.out.println("To Square Root Or Not To Square Root:");
+        System.out.println("Enter array of integers:");
+        int[] input = scanner.readIntArray();
+        String res = String.valueOf(impl8.squareOrSquareRoot(input));
+        System.out.println(res);
     }
 
     public void runTask5() {
+        System.out.println("Count Of Positives Sum Of Negatives :");
+        System.out.println("Enter array of integers:");
+        int[] input = scanner.readIntArray();
+        String res = String.valueOf(impl8.countPositivesSumNegatives(input));
+        System.out.println(res);
     }
 
     public void runTask6() {
+        System.out.println("Convert A String To A Number");
+        System.out.println("Enter a string which can parse to int: ");
+        String input = scanner.readString();
+        while (true) {
+            try {
+                Integer.valueOf(input);
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Enter a string which can parse to int: ");
+                input = scanner.readString();
+            }
+        }
+        String res = String.valueOf(impl8.stringToNumber(input));
+        System.out.println(res);
     }
 
     public void runTask7() {

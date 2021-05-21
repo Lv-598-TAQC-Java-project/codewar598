@@ -21,4 +21,6 @@ import java.math.BigInteger;
      String[] readStringArray();
 
      BigInteger readBigInteger();
-}
+
+     int[] readIntArray();
+ }
