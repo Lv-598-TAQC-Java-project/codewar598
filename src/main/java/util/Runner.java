@@ -8,8 +8,17 @@ public class Runner {
 	private Seven impl7;
 	private Scanner sc;
 
+	public UserNames getUser() {
+		return user;
+	}
+
+	private UserNames user;
+
+
+
 	public Runner(UserNames user) {
 		sc = new ConsoleScanner();
+		this.user = user;
 		switch (user) {
 		case OREST:
 			impl8 = new kata.implementations.OrestTorskyi.EightImpl();

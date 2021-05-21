@@ -5,6 +5,15 @@ public class Menu {
     private final Scanner sc = new ConsoleScanner();
     private Runner runner;
 
+    private static Menu instance;
+
+    public static Menu getInstance() {
+        if (instance == null) {
+            instance = new Menu();
+        }
+        return instance;
+    }
+
     public void showStudentList() {
         System.out.println("List of students: \n" +
                 "1. Victoria Badenko\n" +
@@ -31,6 +40,10 @@ public class Menu {
     public void mainMenu() {
         boolean activeTrue = true;
         while (activeTrue) {
+            if (runner != null){
+                System.out.println(runner.getUser());
+            }
+            System.out.println("0 - exit\n 1 - show user name\n 2 - set user\n 3 - show task\n 4 - run task");
             switch (sc.readInt()) {
                 case 1:
                     showStudentList();
