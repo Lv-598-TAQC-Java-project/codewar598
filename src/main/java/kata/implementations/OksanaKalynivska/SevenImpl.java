@@ -6,8 +6,20 @@ public class SevenImpl implements Seven {
 
 	@Override
 	public long newAvg(double[] arr, double navg) {
-		// TODO Auto-generated method stub
-		return 0;
+		int count = 0;
+		double sum = 0.0;
+
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+			count++;
+
+		}
+		int e = (int) Math.ceil((navg * (count + 1) - sum));
+		if (e < 0) {
+			throw new IllegalArgumentException("It's not good donation");
+		} else {
+			return e;
+		}
 	}
 
 	@Override
