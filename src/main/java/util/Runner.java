@@ -2,10 +2,12 @@ package util;
 
 import kata.Eight;
 import kata.Seven;
+import kata.Six;
 
 public class Runner {
 	private Eight impl8;
 	private Seven impl7;
+	private Six impl6;
 	private Scanner sc;
 
 	public UserNames getUser() {
@@ -28,6 +30,8 @@ public class Runner {
 		case OKSANA:
 			impl8 = new kata.implementations.OksanaKalynivska.EightImp();
 			impl7 = new kata.implementations.OksanaKalynivska.SevenImpl();
+			impl6 = new kata.implementations.OksanaKalynivska.SixImpl();
+			
 
 		case OSTAP:
 
