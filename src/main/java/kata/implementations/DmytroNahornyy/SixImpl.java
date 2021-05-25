@@ -5,7 +5,16 @@ import kata.Six;
 public class SixImpl implements Six {
     @Override
     public long findNb(long m) {
-        return 0;
+        long count = 0;
+        long volume = 0;
+        while (volume < m) {
+            count++;
+            volume += count * count * count;
+        }
+        if (volume == m) {
+            return count;
+        }
+        return -1;
     }
 
     @Override
