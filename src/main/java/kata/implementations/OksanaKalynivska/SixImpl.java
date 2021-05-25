@@ -42,8 +42,26 @@ public class SixImpl implements Six {
 
 	@Override
 	public String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
-		// TODO Auto-generated method stub
-		return null;
+		if (lstOfArt.length == 0 || lstOf1stLetter.length == 0) {
+			return "";
+		}
+
+		int tempTotal;
+		for (int i = 0; i < lstOf1stLetter.length; i++) {
+			tempTotal = 0;
+
+			for (String someBooks : lstOfArt) {
+
+				if (someBooks.substring(0, 1).equals(lstOf1stLetter[i])) {
+
+					tempTotal += Integer.parseInt(someBooks.replaceAll("[^\\d]", ""));
+				}
+			}
+
+			lstOf1stLetter[i] = "(" + lstOf1stLetter[i] + " : " + tempTotal + ")";
+		}
+
+		return String.join(" - ", lstOf1stLetter);
 	}
 
 }
