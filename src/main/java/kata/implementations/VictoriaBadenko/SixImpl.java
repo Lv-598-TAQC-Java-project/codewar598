@@ -55,6 +55,19 @@ public class SixImpl implements Six {
 
     @Override
     public String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
-        return null;
+        String result = "";
+        if (lstOfArt.length == 0 || lstOf1stLetter.length == 0)
+            return result;
+        for (String letter : lstOf1stLetter) {
+            int sum = 0;
+            for (String code : lstOfArt) {
+                if (letter.contains(code.substring(0, 1))) {
+                    code = code.replaceAll("[^\\d.]", "");
+                    sum += Integer.parseInt(code);
+                }
+            }
+            result += "(" + letter + " : " + String.valueOf(sum) + ") - ";
+        }
+        return result.substring(0, result.length() - 3);
     }
 }
