@@ -10,7 +10,7 @@ public class Runner {
 	private Seven impl7;
 	private Six impl6;
 	private Five impl5;
-  
+
 	private Scanner sc;
 
 	public UserNames getUser() {
@@ -46,6 +46,9 @@ public class Runner {
 
 		case VIKTORIA:
 			impl8 = new kata.implementations.VictoriaBadenko.EightImpl();
+			impl7 = new kata.implementations.VictoriaBadenko.SevenImpl();
+			impl6 = new kata.implementations.VictoriaBadenko.SixImpl();
+			impl5 = new kata.implementations.VictoriaBadenko.FiveImpl();
 		case ELVIRA:
 			impl8 = new kata.implementations.ElviraStepaniuk.EightImpl();
 		case VIKTORIASKIKUN:
