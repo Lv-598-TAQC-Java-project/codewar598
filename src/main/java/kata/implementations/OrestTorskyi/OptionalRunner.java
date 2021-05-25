@@ -6,6 +6,7 @@ import kata.Six;
 import util.ConsoleScanner;
 import util.Scanner;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 public class OptionalRunner {
@@ -98,8 +99,10 @@ public class OptionalRunner {
 //        int[] value = new int[]{2};
 //        System.out.println(impl5.artificialRain(value));
 
-       //System.out.println(Arrays.toString(impl5.gap(10,100,200)));
-        System.out.println(impl5.zeros(12));
+//       System.out.println(Arrays.toString(impl5.gap(10,100,200)));
+//       System.out.println(impl5.zeros(1000));
+
+        System.out.println(impl5.perimeter(new BigInteger("51085")));
     }
 
 }

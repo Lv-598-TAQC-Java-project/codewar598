@@ -3,6 +3,8 @@ package kata.implementations.OrestTorskyi;
 import kata.Five;
 
 import java.math.BigInteger;
+import java.util.LinkedList;
+import java.util.List;
 
 
 public class FiveImpl implements Five {
@@ -79,32 +81,63 @@ public class FiveImpl implements Five {
     }
 
     public int zeros(int n) {
-        long number = calculateFactorial(n);
         int count = 0;
-        while(number % 10 == 0) {
-            count++;
-            number /= 10;
+        String numberStr = calculateFactorial(n);
+        for (int i = numberStr.length() - 1; i >= 0; i--) {
+            if (numberStr.charAt(i) == '0') {
+                count++;
+            } else {
+                break;
+            }
         }
         return count;
     }
 
-    private int calculateFactorial(int number) {
-        int factorial = number;
-        for (int i = number - 1; i >= 1; i--) {
-            factorial *= i;
+    private String calculateFactorial(int number) {
+        if (number == 0) {
+            return "1";
         }
-        return factorial;
+        BigInteger factorial = new BigInteger(String.valueOf(number));
+        for (int i = number - 1; i >= 1; i--) {
+            factorial = factorial.multiply(new BigInteger(String.valueOf(i)));
+        }
+        return factorial.toString();
     }
 
-    @Override
     public BigInteger perimeter(BigInteger n) {
-        return null;
+        List<BigInteger> squares = getSquaresValue(n);
+        BigInteger perimeter = getSquaresPerimeter(squares);
+        return perimeter;
+    }
+
+    private List<BigInteger> getSquaresValue(BigInteger n) {
+        List<BigInteger> squareValues = new LinkedList<>();
+        BigInteger square = new BigInteger("0");
+        squareValues.add(new BigInteger("1"));
+        for (int i = 1; i < n.intValue() + 1; i++) {
+            for (int j = i - 1; j >= ((i == 1) ? i - 1 : i - 2); j--) {
+                square = square.add(squareValues.get(j));
+            }
+            squareValues.add(square);
+            square = square.subtract(square);
+        }
+        return squareValues;
+    }
+
+    private BigInteger getSquaresPerimeter(List<BigInteger> squares) {
+        BigInteger perimeter = new BigInteger("0");
+        for (int i = 0; i < squares.size(); i++) {
+            perimeter = perimeter.add(squares.get(i));
+        }
+        perimeter = perimeter.multiply(new BigInteger("4"));
+        return perimeter;
     }
 
     @Override
     public double solveSum(double m) {
         return 0;
     }
+
 
     @Override
     public long[] smallest(long n) {
