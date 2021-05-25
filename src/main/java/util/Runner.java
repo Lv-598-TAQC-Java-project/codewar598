@@ -1,6 +1,7 @@
 package util;
 
 import kata.Eight;
+import kata.Five;
 import kata.Seven;
 import kata.Six;
 
@@ -8,6 +9,7 @@ public class Runner {
 	private Eight impl8;
 	private Seven impl7;
 	private Six impl6;
+	private Five impl5;
 	private Scanner sc;
 
 	public UserNames getUser() {
@@ -31,6 +33,7 @@ public class Runner {
 			impl8 = new kata.implementations.OksanaKalynivska.EightImp();
 			impl7 = new kata.implementations.OksanaKalynivska.SevenImpl();
 			impl6 = new kata.implementations.OksanaKalynivska.SixImpl();
+			impl5 = new kata.implementations.OksanaKalynivska.FiveImpl();
 			
 
 		case OSTAP:
