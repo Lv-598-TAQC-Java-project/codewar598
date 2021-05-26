@@ -2,8 +2,6 @@ package kata.implementations.OrestTorskyi;
 
 import kata.Eight;
 import util.ConsoleScanner;
-
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,7 +21,6 @@ public class EightImpl implements Eight {
         float kpl = mpg * (float) 0.354006;
         String strKpl = String.valueOf(kpl);
         char secondDecimal = strKpl.charAt(strKpl.indexOf(".") + 2);
-//        strKpl = String.format((secondDecimal == '0' ? "%.1f" : "%.2f"), kpl);
         return Float.parseFloat(strKpl);
     }
 
@@ -49,8 +46,8 @@ public class EightImpl implements Eight {
         } else {
             int[] positiveNegativeSum = new int[2];
             for (int i = 0; i < input.length; i++) {
-                if (input[i] >= 0) {
-                    positiveNegativeSum[0] += input[i];
+                if (input[i] > 0) {
+                    positiveNegativeSum[0]++;
                 } else {
                     positiveNegativeSum[1] += input[i];
                 }
@@ -60,7 +57,7 @@ public class EightImpl implements Eight {
     }
 
     public int stringToNumber(String str) {
-        char[] numberSymbols = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+        char[] numberSymbols = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-'};
         char[] strChar = str.toCharArray();
         for (int i = 0; i < strChar.length; i++) {
             for (int j = 0; j < numberSymbols.length; j++) {

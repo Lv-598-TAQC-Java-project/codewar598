@@ -9,7 +9,7 @@ public class SevenImpl implements Seven {
     public long newAvg(double[] arr, double navg) {
         double donat = navg * (arr.length + 1) - DoubleStream.of(arr).sum();
         if (donat < 0) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Expected New Average is too low");
         }
         return (long) (Math.ceil(donat));
     }
