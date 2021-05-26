@@ -6,7 +6,6 @@ import java.math.BigInteger;
 
 public class FiveImpl implements Five {
 
-
     @Override
     public int artificialRain(int[] v) {
         int maxLength = 0;
@@ -44,7 +43,6 @@ public class FiveImpl implements Five {
             if (num % j == 0) return false;
         }
         return true;
-
     }
 
     @Override
