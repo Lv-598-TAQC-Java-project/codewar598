@@ -2,7 +2,7 @@ package kata.implementations.AlonaLutsenko;
 
 import kata.Eight;
 
-public class EightImpl implements Eight {
+public class EightImplA implements Eight {
     public int liters(double time) {
         double liters = 0.5f;
         liters = (liters * time) - (liters * time) % 1;

@@ -8,8 +8,6 @@ public interface Six {
 
         double f(double x);
 
-        double mean(String town, String strng);
-
         double variance(String town, String strng);
 
         String nbaCup(String resultSheet, String toFind);

@@ -8,8 +8,8 @@ import util.Scanner;
 //public class OptionalRunner {
 //    public static void main(String[] args) {
 //        Scanner sc = new ConsoleScanner();
-//        Seven impl7 = new SevenImpl();
-//        Six impl6 = new SixImpl();
+//        SevenImplA impl7 = new SevenImpl();
+//        SixImplA impl6 = new SixImpl();
 ////        System.out.println("Enter info:");
 ////        System.out.println(impl7.whereIsHe(sc.readInt(), sc.readInt(), sc.readInt()));
 //        System.out.println("Enter total volume:");
