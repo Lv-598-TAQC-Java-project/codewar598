@@ -37,6 +37,10 @@ public class Runner {
 			
 
 		case OSTAP:
+			impl8 = new kata.implementations.OstapNadiak.EightImpl();
+			impl7 = new kata.implementations.OstapNadiak.SevenImpl();
+			impl6 = new kata.implementations.OstapNadiak.SixImpl();
+
 
 		case DMYTRO:
 			impl8 = new kata.implementations.DmytroNahornyy.EightImpl();
