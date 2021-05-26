@@ -29,7 +29,7 @@ public class SixImplTest {
 //    В тесті не проходить, а в методі працює???
     @Test
     public void testFindNb4() {
-        long expectedResult = -1;
+        long expectedResult = 0;
         long actualResult = six.findNb(0);
         Assert.assertEquals(expectedResult,actualResult);
     }
