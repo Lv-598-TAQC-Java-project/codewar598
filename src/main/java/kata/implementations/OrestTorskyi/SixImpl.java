@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class SixImpl implements Six {
-
+@Override
     public long findNb(long m) {
         long count = 0;
         int i = 1;
@@ -19,7 +19,7 @@ public class SixImpl implements Six {
         }
         return count == m ? i - 1 : -1;
     }
-
+@Override
     public String balance(String book) {
         String regex = "[^A-Za-z0-9. \n]*";
         book = book.replaceAll(regex, "");
@@ -123,7 +123,6 @@ public class SixImpl implements Six {
         }
         return sum / values.length;
     }
-
 
     public double variance(String town, String strng) {
         double[] values = getValues(town, strng);
