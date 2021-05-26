@@ -2,7 +2,8 @@ package util;
 
 import kata.Eight;
 import kata.Seven;
-import kata.implementations.AlonaLutsenko.EightImplA;
+import kata.Six;
+import kata.Five;
 
 public class Runner {
 	private Eight impl8;
@@ -24,8 +25,8 @@ public class Runner {
 		case OREST:
 			impl8 = new kata.implementations.OrestTorskyi.EightImpl();
 		case ALONA:
-			impl8 = new EightImplA();
-
+			impl8 = new kata.implementations.AlonaLutsenko.EightImplA();
+			impl7 = new kata.implementations.AlonaLutsenko.SevenImplA();
 		case OKSANA:
 			impl8 = new kata.implementations.OksanaKalynivska.EightImp();
 			impl7 = new kata.implementations.OksanaKalynivska.SevenImpl();
