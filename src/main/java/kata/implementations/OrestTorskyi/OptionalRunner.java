@@ -1,5 +1,6 @@
 package kata.implementations.OrestTorskyi;
 
+import kata.Eight;
 import kata.Five;
 import kata.Seven;
 import kata.Six;
@@ -12,6 +13,7 @@ import java.util.Arrays;
 public class OptionalRunner {
     public static void main(String[] args) {
         Scanner sc = new ConsoleScanner();
+        Eight impl8 = new EightImpl();
         Seven impl7 = new SevenImpl();
         Six impl6 = new SixImpl();
         Five impl5 = new FiveImpl();
@@ -20,6 +22,7 @@ public class OptionalRunner {
 //        System.out.println("Enter total volume:");
 //        System.out.println(impl6.findNb(sc.readLong()));
 
+        System.out.println(Arrays.toString(impl8.countPositivesSumNegatives(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15})));
         String data =
                 "Rome:Jan 81.2,Feb 63.2,Mar 70.3,Apr 55.7,May 53.0,Jun 36.4,Jul 17.5,Aug 27.5,Sep 60.9,Oct 117.7,Nov 111.0,Dec 97.9" +
                         "\n" +
@@ -99,10 +102,16 @@ public class OptionalRunner {
 //        int[] value = new int[]{2};
 //        System.out.println(impl5.artificialRain(value));
 
-//       System.out.println(Arrays.toString(impl5.gap(10,100,200)));
+//       System.out.println(Arrays.toString(impl5.gap(2, 3, 10)));
 //       System.out.println(impl5.zeros(1000));
 
-        System.out.println(impl5.perimeter(new BigInteger("51085")));
+//        System.out.println(impl5.perimeter(new BigInteger("51085")));
+
+//        System.out.println(Arrays.toString(impl5.smallest(285365)));
+
+//        System.out.println(impl5.solveSum(2));
+
+//        System.out.println(impl6.f(1e-15));
     }
 
 }

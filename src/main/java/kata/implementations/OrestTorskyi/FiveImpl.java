@@ -43,7 +43,12 @@ public class FiveImpl implements Five {
     }
 
     public long[] gap(int g, long m, long n) {
-        long firstPrime = searchNextPrimeNumber(m);
+        long firstPrime;
+        if (isPrimeNumber(m)) {
+            firstPrime = m;
+        } else {
+            firstPrime = searchNextPrimeNumber(m);
+        }
         long nextPrime = searchNextPrimeNumber(firstPrime);
         long primeSubtraction = 0;
         long[] pairPrime = null;
@@ -65,20 +70,31 @@ public class FiveImpl implements Five {
     private long searchNextPrimeNumber(long fromNumber) {
         long i = fromNumber + 1;
         while (true) {
-            for (long j = 2; j <= i / 2; j++) {
-                if (i % j == 0) {
-                    break;
-                } else {
-                    if (j == i / 2) {
-                        return i;
-                    } else {
-                        continue;
-                    }
-                }
+            if (isPrimeNumber(i)) {
+                return i;
+            } else {
+                i++;
             }
-            i++;
+
         }
     }
+
+    private boolean isPrimeNumber(long currentNumber) {
+        boolean result = false;
+        for (long j = 2; j <= (currentNumber == 3 ? currentNumber : currentNumber / 2); j++) {
+            if (currentNumber % j == 0) {
+                return result;
+            } else {
+                if (j == (currentNumber == 3 ? currentNumber - 1 : currentNumber / 2)) {
+                    result = true;
+                } else {
+                    continue;
+                }
+            }
+        }
+        return result;
+    }
+
 
     public int zeros(int n) {
         int count = 0;
@@ -135,12 +151,82 @@ public class FiveImpl implements Five {
 
     @Override
     public double solveSum(double m) {
-        return 0;
+        double d = findDescriminant(m);
+        double result = findX(d, m);
+        return result;
+    }
+
+    private double findDescriminant(double m) {
+        double descriminant = Math.pow((m * 2 + 1), 2) - 4 * Math.pow(m, 2);
+        return descriminant;
+    }
+
+    private double findX(double descriminant, double m) {
+        double firstValue = (-((-2) * m - 1) - Math.sqrt(descriminant)) / (2 * m);
+        double secondValue = (-((-3) * m) + Math.sqrt(descriminant)) / (2 * m);
+        return firstValue > 0 && firstValue < 1 ? firstValue
+                : secondValue > 0 && secondValue < 1 ? secondValue : -1;
     }
 
 
     @Override
     public long[] smallest(long n) {
-        return new long[0];
+        List<Character> numberList = getCharacterList(n);
+        List<Long> variantsList = new LinkedList<>();
+        List<List<Integer>> indexesOfChange = new LinkedList<>();
+        Character digit;
+        for (int i = 0; i < numberList.size(); i++) {
+            digit = numberList.get(i);
+            numberList.remove(i);
+            for (int j = 0; j < numberList.size(); j++) {
+                List<Integer> index = new LinkedList<>();
+                numberList.add(j, digit);
+                variantsList.add(getLongNumberFromCharactersArray(numberList));
+                index.add(i);
+                index.add(j);
+                indexesOfChange.add(index);
+                numberList.remove(j);
+            }
+            numberList.add(i, digit);
+        }
+        return getSmallestNumber(variantsList, indexesOfChange);
     }
+
+
+    private List<Character> getCharacterList(long n) {
+        char[] numberArray = String.valueOf(n).toCharArray();
+        List<Character> numberList = new LinkedList<>();
+        for (char numberSymbol : numberArray) {
+            numberList.add(numberSymbol);
+        }
+        return numberList;
+    }
+
+    private long getLongNumberFromCharactersArray(List<Character> numberList) {
+        StringBuffer strNumber = new StringBuffer();
+        String regex = "^[0]*";
+        long number;
+        for (Character symbolNumber : numberList) {
+            strNumber.append(symbolNumber);
+        }
+        number = Long.parseLong(strNumber.toString().replaceAll(regex, ""));
+        return number;
+    }
+
+    private long[] getSmallestNumber(List<Long> numberList, List<List<Integer>> indexesOfChange) {
+        long minValue = numberList.get(0);
+        List<Integer> index = indexesOfChange.get(0);
+        long[] result = new long[3];
+        for (int i = 1; i < numberList.size(); i++) {
+            if (minValue > numberList.get(i)) {
+                minValue = numberList.get(i);
+                index = indexesOfChange.get(i);
+            }
+        }
+        result[0] = minValue;
+        result[1] = index.get(0);
+        result[2] = index.get(1);
+        return result;
+    }
+
 }

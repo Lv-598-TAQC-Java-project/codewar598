@@ -73,9 +73,9 @@ public class SixImpl implements Six {
 
 
     public double f(double x) {
-        BigDecimal number = new BigDecimal(x + 1);
-        number = number.subtract(new BigDecimal(1));
-        double resultNumber = number.doubleValue();
+        BigDecimal a = new BigDecimal(Math.sqrt(x + 1));
+        BigDecimal c = a.subtract(BigDecimal.valueOf(1));
+        double resultNumber = c.doubleValue();
         return resultNumber;
     }
 
