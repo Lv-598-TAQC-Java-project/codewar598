@@ -1,13 +1,16 @@
 package util;
 
 import kata.Eight;
+import kata.Five;
 import kata.Seven;
 import kata.Six;
-import kata.Five;
 
 public class Runner {
 	private Eight impl8;
 	private Seven impl7;
+	private Six impl6;
+	private Five impl5;
+
 	private Scanner sc;
 
 	public UserNames getUser() {
@@ -30,13 +33,22 @@ public class Runner {
 		case OKSANA:
 			impl8 = new kata.implementations.OksanaKalynivska.EightImp();
 			impl7 = new kata.implementations.OksanaKalynivska.SevenImpl();
+			impl6 = new kata.implementations.OksanaKalynivska.SixImpl();
+
 
 		case OSTAP:
 
 		case DMYTRO:
 			impl8 = new kata.implementations.DmytroNahornyy.EightImpl();
+			impl7 = new kata.implementations.DmytroNahornyy.SevenImpl();
+			impl6 = new kata.implementations.DmytroNahornyy.SixImpl();
+			impl5 = new kata.implementations.DmytroNahornyy.FiveImpl();
+
 		case VIKTORIA:
 			impl8 = new kata.implementations.VictoriaBadenko.EightImpl();
+			impl7 = new kata.implementations.VictoriaBadenko.SevenImpl();
+			impl6 = new kata.implementations.VictoriaBadenko.SixImpl();
+			impl5 = new kata.implementations.VictoriaBadenko.FiveImpl();
 		case ELVIRA:
 			impl8 = new kata.implementations.ElviraStepaniuk.EightImpl();
 		case VIKTORIASKIKUN:

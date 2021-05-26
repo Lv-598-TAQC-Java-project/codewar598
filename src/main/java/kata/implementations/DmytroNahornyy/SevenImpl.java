@@ -6,8 +6,19 @@ public class SevenImpl implements Seven{
 
 	@Override
 	public long newAvg(double[] arr, double navg) {
-		// TODO Auto-generated method stub
-		return 0;
+		double sum =0;
+
+		for(int i = 0; i <= arr.length - 1; i++){
+			sum+=arr[i];
+			if(arr[i] < 0){
+				throw new IllegalArgumentException("Non positive");
+			}
+		}
+		long result = (long)Math.ceil(navg * (arr.length + 1) - sum);
+		if(result <= 0){
+			throw new IllegalArgumentException("Non positive");
+		}
+		return result;
 	}
 
 	@Override
