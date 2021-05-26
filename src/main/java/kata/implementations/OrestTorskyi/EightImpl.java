@@ -21,7 +21,6 @@ public class EightImpl implements Eight {
         float kpl = mpg * (float) 0.354006;
         String strKpl = String.valueOf(kpl);
         char secondDecimal = strKpl.charAt(strKpl.indexOf(".") + 2);
-//        strKpl = String.format((secondDecimal == '0' ? "%.1f" : "%.2f"), kpl);
         return Float.parseFloat(strKpl);
     }
 
