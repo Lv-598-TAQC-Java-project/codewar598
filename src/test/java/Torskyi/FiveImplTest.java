@@ -1,4 +1,4 @@
-package com.testImpl.Torskyi;
+package Torskyi;
 
 import kata.implementations.OrestTorskyi.FiveImpl;
 import org.testng.Assert;
