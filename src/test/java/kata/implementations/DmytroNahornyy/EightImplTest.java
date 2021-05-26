@@ -29,4 +29,23 @@ public class EightImplTest {
         int[]actualResult = eight.countPositivesSumNegatives(new int[]{});
         Assert.assertEquals(exceptedResult, actualResult);
     }
+
+    @Test
+    public void testLiters() {
+        int expectedResult = 3;
+        int actualResult = eight.liters(6.7);
+        Assert.assertEquals(expectedResult,actualResult);
+    }
+    @Test
+    public void testLitersZero() {
+        int expectedResult = 0;
+        int actualResult = eight.liters(0);
+        Assert.assertEquals(expectedResult,actualResult);
+    }
+//    @Test
+//    public void testLitersNegative(){
+//        int expectedResult = 0;
+//        int actualResult = eight.liters(-10.5);
+//        Assert.assertEquals(actualResult,expectedResult);
+//    }
 }

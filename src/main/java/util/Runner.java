@@ -169,18 +169,35 @@ public class Runner {
     }
 
     public void runTask14() {
+
     }
 
     public void runTask15() {
+        System.out.println("Floating-point Approximation (I)\nEnted double value:");
+        double value = sc.readDouble();
+        double result = impl6.f(value);
+        System.out.println("Result: "+result);
     }
 
     public void runTask16() {
     }
 
     public void runTask17() {
+        System.out.println("Ranking NBA.\nEnter a string with results of NBA teams:");
+        String resultsOfNBA = sc.readString();
+        System.out.println("Enter team name:");
+        String teamToFind = sc.readString();
+        String result = impl6.nbaCup(resultsOfNBA,teamToFind);
+
+        System.out.println(result);
     }
 
     public void runTask18() {
+        System.out.println("Help the bookseller !\nEnter an extract of a stocklist:");
+        String[] stocklist = sc.readStringArray();
+        System.out.println("Enter a list of categories in capital letters:");
+        String[] categories = sc.readStringArray();
+        System.out.println(impl6.stockSummary(stocklist,categories));
     }
 
     public void runTask19() {
