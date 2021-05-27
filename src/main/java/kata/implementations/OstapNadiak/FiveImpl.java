@@ -133,6 +133,33 @@ public class FiveImpl implements Five {
 
     @Override
     public long[] smallest(long n) {
-        return new long[0];
+        char first;
+        long  toCompare;
+        long min = n;
+        int index = 0;
+        int secondIndex =0;
+        char[] a = String.valueOf(n).toCharArray();
+        for (int i = 0; i < a.length; i++)
+        {
+            for (int j = 0; j < a.length; j++)
+            {
+                StringBuffer buff = new StringBuffer(String.valueOf(n));
+
+                first = buff.charAt(i);
+                buff.delete(i, i+1);
+
+                buff.insert(j, first);
+
+                toCompare = Integer.parseInt(new String(buff));
+                if (toCompare < min) {
+                    min = toCompare;
+                    index = i;
+                    secondIndex=j;
+
+                }
+            }
+        }
+
+        return new long[] {min,index,secondIndex};
     }
 }
