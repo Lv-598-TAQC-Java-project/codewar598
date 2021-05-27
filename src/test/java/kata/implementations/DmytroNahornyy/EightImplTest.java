@@ -1,5 +1,5 @@
-package kata.implementations.DmytroNahornyy;
-
+package testNG.DmytroNahornyy;
+import kata.implementations.DmytroNahornyy.EightImpl;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
