@@ -1,14 +1,14 @@
 package kata.six;
 
+import kata.DataProvider;
 import kata.Six;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
-public class BalanceTest extends DataProviderForSix {
+public class BalanceTest  {
 private Six six;
 
-    @Test(dataProvider =  "implementationsSix")
+    @Test(dataProvider =  "impl6",dataProviderClass = DataProvider.class)
     public void testBalance(Six six) {
      //To Do...
     }

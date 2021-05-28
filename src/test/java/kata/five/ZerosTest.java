@@ -1,16 +1,14 @@
 package kata.five;
 
+import kata.DataProvider;
 import kata.Five;
 import org.testng.Assert;
-import org.testng.IResultMap;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-
-public class ZerosTest extends DataProviderForFive{
+public class ZerosTest {
     private Five impl;
 
-    @Test(dataProvider = "create",dataProviderClass = DataProviderForFive.class)
+    @Test(dataProvider = "impl5",dataProviderClass = DataProvider.class)
     public void testZeros(Five impl) {
             int expectedResult = 2;
             int actualResult = impl.zeros(14);

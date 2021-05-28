@@ -1,13 +1,14 @@
 package kata.six;
 
+import kata.DataProvider;
 import kata.Six;
 import org.testng.annotations.Test;
 
 
-public class MeanTest extends DataProviderForSix {
+public class MeanTest{
 private Six six;
 
-    @Test(dataProvider =  "implementationsSix")
+    @Test(dataProvider =  "impl6",dataProviderClass = DataProvider.class)
     public void testMean(Six six) {
      //To Do...
     }

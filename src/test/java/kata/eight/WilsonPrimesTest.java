@@ -1,4 +1,4 @@
-package Impl.Eight;
+package kata.eight;
 
 public class WilsonPrimesTest {
 }
