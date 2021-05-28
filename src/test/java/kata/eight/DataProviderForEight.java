@@ -8,7 +8,7 @@ public class DataProviderForEight {
         return new Object[]{
                 new kata.implementations.DmytroNahornyy.EightImpl(),
                 new kata.implementations.OksanaKalynivska.EightImp(),
-                new kata.implementations.AlonaLutsenko.EightImpl(),
+                new kata.implementations.AlonaLutsenko.EightImplA(),
                 new kata.implementations.ElviraStepaniuk.EightImpl(),
                 new kata.implementations.OrestTorskyi.EightImpl(),
                 new kata.implementations.OstapNadiak.EightImpl(),

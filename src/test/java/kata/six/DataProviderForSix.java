@@ -12,7 +12,7 @@ public class DataProviderForSix {
                 new kata.implementations.OrestTorskyi.SixImpl(),
                 new kata.implementations.OksanaKalynivska.SixImpl(),
                 new kata.implementations.ElviraStepaniuk.SixImpl(),
-                new kata.implementations.AlonaLutsenko.Six()
+                new kata.implementations.AlonaLutsenko.SixImplA()
         };
     }
 }
