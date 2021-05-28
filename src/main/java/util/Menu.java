@@ -34,7 +34,24 @@ public class Menu {
                 "4. To square root or no to square\n" +
                 "5. Count of positives / sum of negatives\n" +
                 "6. Convert a String to a Number!\n" +
-                "7. Willson primes");
+                "7. Willson primes\n"+
+                "8. Formatting decimal places\n"+
+                "9. Find numbers which are divisible by given number\n"+
+                "10. Looking for a benefactor\n"+
+                "11. Sum of the first nth term of Series\n"+
+                "12. Where is Vasya?\n"+
+                "13. Build a pile of Cubes\n"+
+                "14. Easy balance checking\n"+
+                "15. Floating-point Approximation (I)\n"+
+                "16. Rainfall\n"+
+                "17. Ranking NBA\n"+
+                "18. Help the bookseller!\n"+
+                "19. Artificial Rain\n"+
+                "20. Gap in Primes\n"+
+                "21. Trailing zeros in factorial\n"+
+                "22. Perimeter of squares in a rectangle\n"+
+                "23. Which x for that sum?\n"+
+                "24. Find the smallest\n");
     }
 
     public void mainMenu() {
@@ -43,7 +60,7 @@ public class Menu {
             if (runner != null){
                 System.out.println(runner.getUser());
             }
-            System.out.println("0 - exit\n 1 - show user name\n 2 - set user\n 3 - show task\n 4 - run task");
+            System.out.println(" 0 - exit\n 1 - show user name\n 2 - set user\n 3 - show task\n 4 - run task");
             switch (sc.readInt()) {
                 case 1:
                     showStudentList();
