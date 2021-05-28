@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class SixImpl implements Six {
-@Override
+    @Override
     public long findNb(long m) {
         long count = 0;
         int i = 1;
@@ -19,7 +19,8 @@ public class SixImpl implements Six {
         }
         return count == m ? i - 1 : -1;
     }
-@Override
+
+    @Override
     public String balance(String book) {
         String regex = "[^A-Za-z0-9. \n]*";
         book = book.replaceAll(regex, "");
@@ -73,10 +74,7 @@ public class SixImpl implements Six {
 
 
     public double f(double x) {
-        BigDecimal a = new BigDecimal(Math.sqrt(x + 1));
-        BigDecimal c = a.subtract(BigDecimal.valueOf(1));
-        double resultNumber = c.doubleValue();
-        return resultNumber;
+       return x / (1 + Math.sqrt(x + 1));
     }
 
 
@@ -149,9 +147,11 @@ public class SixImpl implements Six {
 
     private List<String> getTeamMatches(String resultSheet, String team) {
         String[] allMatches = resultSheet.split(",");
+        String[] pairOfTeams;
+        String regex = "[0-9]*";
         List<String> teamMatches = new LinkedList<>();
         for (String match : allMatches) {
-            if (match.matches("(.*)" + team + "(.*)")) {
+            if (match.matches("(.*)\\b" + team + "\\b(.*)")) {
                 teamMatches.add(match);
             } else {
                 continue;
@@ -163,12 +163,13 @@ public class SixImpl implements Six {
     private List<Integer> getTeamResults(List<String> teamMatches, String team) {
         int wins = 0, draws = 0, loses = 0, scoreCounter = 0, concededCounter = 0, points = 0, requestedTeam = 0, anotherTeam = 0;
         String[] strScores;
-        String regex = "[^0-9 .]+";
+        String regex = "([0-9]+[A-z]+)\\w*|([A-z]+[0-9]+)\\w|[^0-9 .]+";
         int[] teamScores;
         List<Integer> resultList = new LinkedList<>();
 
         for (int i = 0; i < teamMatches.size(); i++) {
-            strScores = teamMatches.get(i).replaceAll(regex, "").replaceAll("[ ]+", " ").trim().split(" ");
+            strScores = teamMatches.get(i).replaceAll(regex, "").replaceAll("[ ]+", " ")
+                    .trim().split(" ");
             teamScores = convertStringToIntArray(strScores);
             if (teamScores == null) {
                 resultList.add(i);
@@ -215,7 +216,9 @@ public class SixImpl implements Six {
     }
 
     public String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
-        if(lstOfArt.length == 0 || lstOf1stLetter.length == 0) { return ""; }
+        if (lstOfArt.length == 0 || lstOf1stLetter.length == 0) {
+            return "";
+        }
         Map<String, Integer> bookList = getBookList(lstOfArt);
         return getNumberOfBooks(bookList, lstOf1stLetter);
     }

@@ -18,10 +18,12 @@ public class EightImpl implements Eight {
     }
 
     public float mpgToKPM(float mpg) {
-        float kpl = mpg * (float) 0.354006;
-        String strKpl = String.valueOf(kpl);
-        char secondDecimal = strKpl.charAt(strKpl.indexOf(".") + 2);
-        return Float.parseFloat(strKpl);
+        float kpl = mpg * (float)0.354006;
+        String secondDecimal = String.valueOf(kpl);
+        float multiplier = secondDecimal.charAt(secondDecimal.indexOf(".") + 2) == '0' ? 10 : 100;
+        float result = Math.round(kpl * multiplier);
+        result = result / multiplier;
+        return result;
     }
 
     public int[] squareOrSquareRoot(int[] array) {
