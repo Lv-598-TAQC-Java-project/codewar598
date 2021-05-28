@@ -30,7 +30,8 @@ public class Runner {
                 impl8 = new kata.implementations.OrestTorskyi.EightImpl();
                 break;
             case ALONA:
-                impl8 = new kata.implementations.AlonaLutsenko.EightImpl();
+                impl8 = new kata.implementations.AlonaLutsenko.EightImplA();
+                impl7 = new kata.implementations.AlonaLutsenko.SevenImplA();
                 break;
 
             case OKSANA:
