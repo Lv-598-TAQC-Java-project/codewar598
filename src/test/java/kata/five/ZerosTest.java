@@ -1,6 +1,6 @@
-package Impl.five;
+package kata.five;
 
-import Impl.DataProvider;
+import kata.DataProvider;
 import kata.Five;
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -1,4 +1,4 @@
-package Impl.Seven;
+package kata.seven;
 
 public class SeriesSumTest {
 }

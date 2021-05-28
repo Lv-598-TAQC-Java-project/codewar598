@@ -1,14 +1,14 @@
-package Impl.five;
+package kata.five;
 
-import Impl.DataProvider;
+import kata.DataProvider;
 import kata.Five;
 import org.testng.annotations.Test;
 
-public class SolveSumTest {
+public class PerimeterTest {
     private Five impl;
 
     @Test(dataProvider = "impl5",dataProviderClass = DataProvider.class)
-    public void testSolveSum(Five impl) {
+    public void testPerimeter(Five impl) {
         //To Do
     }
 }

@@ -1,15 +1,15 @@
-package Impl.six;
+package kata.six;
 
-import Impl.DataProvider;
+import kata.DataProvider;
 import kata.Six;
 import org.testng.annotations.Test;
 
 
-public class StockSummaryTest {
+public class NBACupTest {
 private Six six;
 
     @Test(dataProvider =  "impl6",dataProviderClass = DataProvider.class)
-    public void testStockSummary(Six six) {
+    public void testNBACup(Six six) {
      //To Do...
     }
 

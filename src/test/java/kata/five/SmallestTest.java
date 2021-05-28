@@ -1,14 +1,14 @@
-package Impl.five;
+package kata.five;
 
-import Impl.DataProvider;
+import kata.DataProvider;
 import kata.Five;
 import org.testng.annotations.Test;
 
-public class ArtificialRainTest {
+public class    SmallestTest {
     private Five impl;
 
     @Test(dataProvider = "impl5",dataProviderClass = DataProvider.class)
-    public void testArtificialRain(Five impl) {
+    public void testSmallest(Five impl) {
         //To Do
     }
 }

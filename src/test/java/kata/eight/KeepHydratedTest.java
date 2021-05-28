@@ -1,6 +1,6 @@
-package Impl.Eight;
+package kata.eight;
 
-import Impl.DataProvider;
+import kata.DataProvider;
 import kata.Eight;
 import org.testng.Assert;
 import org.testng.annotations.Test;
