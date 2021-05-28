@@ -1,4 +1,4 @@
-package kata.fiveTest;
+package kata.five;
 
 import kata.Five;
 import org.testng.Assert;

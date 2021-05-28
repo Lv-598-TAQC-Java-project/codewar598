@@ -8,7 +8,7 @@ public class DataProvider {
                 new kata.implementations.DmytroNahornyy.EightImpl(),
                 new kata.implementations.OksanaKalynivska.EightImp(),
                 new kata.implementations.VictoriaBadenko.EightImpl(),
-                new kata.implementations.AlonaLutsenko.EightImpl(),
+                new kata.implementations.AlonaLutsenko.EightImplA(),
                 new kata.implementations.ElviraStepaniuk.EightImpl(),
                 new kata.implementations.OstapNadiak.EightImpl()};
     }
@@ -20,7 +20,7 @@ public class DataProvider {
                 new kata.implementations.DmytroNahornyy.SevenImpl(),
                 new kata.implementations.OksanaKalynivska.SevenImpl(),
                 new kata.implementations.VictoriaBadenko.SevenImpl(),
-                new kata.implementations.AlonaLutsenko.Seven(),
+                new kata.implementations.AlonaLutsenko.SevenImplA(),
                 new kata.implementations.ElviraStepaniuk.SevenImpl(),
                 new kata.implementations.OstapNadiak.SevenImpl()};
     }

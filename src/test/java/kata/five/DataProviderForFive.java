@@ -8,7 +8,7 @@ public class DataProviderForFive {
         return new Object[]{
                 new kata.implementations.DmytroNahornyy.FiveImpl(),
                 new kata.implementations.OksanaKalynivska.FiveImpl(),
-                new kata.implementations.AlonaLutsenko.Five(),
+                new kata.implementations.AlonaLutsenko.FiveImplA(),
                 new kata.implementations.ElviraStepaniuk.FiveImpl(),
                 new kata.implementations.OrestTorskyi.FiveImpl(),
                 new kata.implementations.OstapNadiak.FiveImpl(),
