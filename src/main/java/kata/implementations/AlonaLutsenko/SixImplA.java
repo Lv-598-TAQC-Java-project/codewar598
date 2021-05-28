@@ -68,6 +68,11 @@ public class SixImplA implements Six {
     }
 
     @Override
+    public double mean(String town, String strng) {
+        return 0;
+    }
+
+    @Override
     public double variance(String town, String strng) {
         if (town == null || town.length() == 0 || strng == null || strng.length() == 0) return -1;
         final String s = town + ":";
