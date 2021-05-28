@@ -28,9 +28,13 @@ public class Runner {
         switch (user) {
             case OREST:
                 impl8 = new kata.implementations.OrestTorskyi.EightImpl();
+                impl7 = new kata.implementations.OrestTorskyi.SevenImpl();
+                impl6 = new kata.implementations.OrestTorskyi.SixImpl();
+                impl5 = new kata.implementations.OrestTorskyi.FiveImpl();
                 break;
             case ALONA:
-                impl8 = new kata.implementations.AlonaLutsenko.EightImpl();
+                impl8 = new kata.implementations.AlonaLutsenko.EightImplA();
+                impl7 = new kata.implementations.AlonaLutsenko.SevenImplA();
                 break;
 
             case OKSANA:
@@ -179,7 +183,7 @@ public class Runner {
     }
 
     public void runTask15() {
-        System.out.println("Floating-point Approximation (I)\nEnted double value:");
+        System.out.println("Floating-point Approximation (I)\nEnter double value:");
         double value = sc.readDouble();
         double result = impl6.f(value);
         System.out.println("Result: "+result);

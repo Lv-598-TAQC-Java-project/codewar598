@@ -12,7 +12,7 @@ public class SevenImpl implements Seven {
             nextDonation -= arr[i];
         }
         if (nextDonation <= 0) {
-            return -1;
+            throw new IllegalArgumentException("Value too big (" + navg + ")");
         }
         return (long) Math.ceil(nextDonation);
     }
