@@ -2,9 +2,9 @@ package kata;
 
 public class DataProvider {
     @org.testng.annotations.DataProvider(name = "impl8")
-    public Object[] getDifferentImplementationsEight()
-    {
-        return new Object[]{new kata.implementations.OrestTorskyi.EightImpl(),
+    public Object[] getDifferentImplementationsEight() {
+        return new Object[]{
+                new kata.implementations.OrestTorskyi.EightImpl(),
                 new kata.implementations.DmytroNahornyy.EightImpl(),
                 new kata.implementations.OksanaKalynivska.EightImp(),
                 new kata.implementations.VictoriaBadenko.EightImpl(),
@@ -14,9 +14,9 @@ public class DataProvider {
     }
 
     @org.testng.annotations.DataProvider(name = "impl7")
-    public Object[] getDifferentImplementationsSeven()
-    {
-        return new Object[]{ new kata.implementations.OrestTorskyi.SevenImpl(),
+    public Object[] getDifferentImplementationsSeven() {
+        return new Object[]{
+                new kata.implementations.OrestTorskyi.SevenImpl(),
                 new kata.implementations.DmytroNahornyy.SevenImpl(),
                 new kata.implementations.OksanaKalynivska.SevenImpl(),
                 new kata.implementations.VictoriaBadenko.SevenImpl(),
@@ -26,9 +26,9 @@ public class DataProvider {
     }
 
     @org.testng.annotations.DataProvider(name = "impl6")
-    public Object[] getDifferentImplementationsSix()
-    {
-        return new Object[]{ new kata.implementations.OrestTorskyi.SixImpl(),
+    public Object[] getDifferentImplementationsSix() {
+        return new Object[]{
+                new kata.implementations.OrestTorskyi.SixImpl(),
                 new kata.implementations.DmytroNahornyy.SixImpl(),
                 new kata.implementations.OksanaKalynivska.SixImpl(),
                 new kata.implementations.VictoriaBadenko.SixImpl(),
@@ -38,9 +38,9 @@ public class DataProvider {
     }
 
     @org.testng.annotations.DataProvider(name = "impl5")
-    public Object[] getDifferentImplementationsFive()
-    {
-        return new Object[]{ new kata.implementations.OrestTorskyi.FiveImpl(),
+    public Object[] getDifferentImplementationsFive() {
+        return new Object[]{
+                new kata.implementations.OrestTorskyi.FiveImpl(),
                 new kata.implementations.DmytroNahornyy.FiveImpl(),
                 new kata.implementations.OksanaKalynivska.FiveImpl(),
                 new kata.implementations.VictoriaBadenko.FiveImpl(),
