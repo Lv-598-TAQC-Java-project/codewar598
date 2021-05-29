@@ -1,11 +1,13 @@
 package kata.six;
 
-import kata.implementations.OksanaKalynivska.SixImpl;
+import kata.Six;
+
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RankingNBATest {
-    SixImpl six = new SixImpl();
+  private Six six;
     String resultSheet1 = "Los Angeles Clippers 104 Dallas Mavericks 88,New York Knicks 101 Atlanta Hawks 112,Indiana Pacers 103 Memphis Grizzlies 112,"
             + "Los Angeles Lakers 111 Minnesota Timberwolves 112,Phoenix Suns 95 Dallas Mavericks 111,Portland Trail Blazers 112 New Orleans Pelicans 94,"
             + "Sacramento Kings 104 Los Angeles Clippers 111,Houston Rockets 85 Denver Nuggets 105,Memphis Grizzlies 76 Cleveland Cavaliers 106,"
@@ -30,15 +32,15 @@ public class RankingNBATest {
             + "Golden State Warriors,Dallas Maver";
     String resultSheet3 = resultSheet1 + resultSheet2;
 
-    @Test
-    public void testCorrectRes() {
+    @Test(dataProvider = "create",dataProviderClass = DataProviderForSix.class)
+    public void testCorrectRes(Six six) {
         String actual = six.nbaCup(resultSheet3, "Boston Celtics");
         String expected = "Boston Celtics:W=4;D=0;L=0;Scored=403;Conceded=350;Points=12";
         Assert.assertEquals(actual, expected);
     }
 
-    @Test
-    public void testNOTCorrectRes() {
+@Test(dataProvider = "create",dataProviderClass = DataProviderForSix.class)
+    public void testNOTCorrectRes(Six six) {
         String actual = six.nbaCup(resultSheet3, "Boston Celt");
         String expected = "Boston Celt:This team didn't play!";
         Assert.assertEquals(actual, expected);
