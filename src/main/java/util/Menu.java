@@ -16,13 +16,13 @@ public class Menu {
 
     public void showStudentList() {
         System.out.println("List of students: \n" +
-                "1. Victoria Badenko\n" +
-                "2. Oksana Kalynivska\n" +
-                "3. Alyona Lutsenko\n" +
+                "1. Orest Torskyi\n" +
+                "2. Alyona Lutsenko\n" +
+                "3. Oksana Kalynivska\n" +
                 "4. Ostap Nadiak\n" +
                 "5. Dmytro Nahornyy\n" +
-                "6. Elvira Stepaniuk\n" +
-                "7. Orest Torskyi\n"+
+                "6. Victoria Badenko\n" +
+                "7. Elvira Stepaniuk \n"+
                 "8. Viktoria Skikun");
     }
 
@@ -159,11 +159,11 @@ public class Menu {
                     runner.runTask24();
                     break;
                 default:
-                    System.out.println("Please enter number of task from 1 to 24!");
+                    System.out.println("Please, enter number of task from 1 to 24!");
                     break;
             }
         } catch (NullPointerException exception) {
-            System.out.println("Plese set user first!");
+            System.out.println("Please, set user first!");
         }
     }
     public void setStudent(int id) {

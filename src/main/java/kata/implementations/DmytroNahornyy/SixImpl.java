@@ -19,22 +19,91 @@ public class SixImpl implements Six {
 
     @Override
     public String balance(String book) {
-        return null;
+        String s = book.replaceAll("([^\\n. \\da-zA-Z])", "");
+        String[] array = s.split("[\\n]+");
+        double current = Double.parseDouble(array[0]);
+        double ttl = 0;
+        int counter = 0;
+        StringBuilder result = new StringBuilder();
+        result.append("Original Balance: ").append(array[0]);
+
+        for (int i = 1; i < array.length; i++) {
+            counter++;
+            String[] line = array[i].split("[ ]+");
+            current -= Double.parseDouble(line[2]);
+            ttl += Double.parseDouble(line[2]);
+            String res = String.format("\\r\\n%s %s %s Balance %.2f", line[0], line[1], line[2], current);
+            result.append(res);
+        }
+
+        result.append(String.format("\\r\\nTotal expense  %.2f\\r\\nAverage expense  %.2f", ttl, ttl / counter));
+        return result.toString();
     }
 
     @Override
     public double f(double x) {
-        return 0;
+        return x / (1 + Math.sqrt(x + 1));
     }
 
     @Override
     public double mean(String town, String strng) {
-        return 0;
+        if (town == null || town.length() == 0 || strng == null || strng.length() == 0) return -1;
+        final String s = town + ":";
+        final String[] a = strng.split("\n");
+        String[] recs = null;
+        int l;
+        double sum = 0;
+
+        for (String str : a) {
+            if (str.startsWith(s)) {
+                recs = str.split(":")[1].split(",");
+                break;
+            }
+        }
+        if (recs == null || recs.length == 0) return -1;
+
+        l = recs.length;
+        for (int i = 0; i < l; i++) {
+            sum += Double.parseDouble(recs[i].split(" ")[1]);
+        }
+
+        return sum / l;
     }
 
     @Override
-    public double variance(String town, String strng) {
-        return 0;
+    public double variance(String town, String string) {
+        if (town == null || town.length() == 0 || string == null || string.length() == 0) return -1;
+        final String s = town + ":";
+        final String[] a = string.split("\n");
+        String[] recs = null;
+        double[] vals = null;
+        int l;
+        double temp;
+        double sum = 0;
+
+        for (String str : a) {
+            if (str.startsWith(s)) {
+                recs = str.split(":")[1].split(",");
+                break;
+            }
+        }
+        if (recs == null || recs.length == 0) return -1;
+
+        l = recs.length;
+        vals = new double[l];
+        for (int i = 0; i < l; i++) {
+            vals[i] = temp = Double.parseDouble(recs[i].split(" ")[1]);
+            sum += temp;
+        }
+
+        temp = sum / l;
+        sum = 0;
+        for (int i = 0; i < l; i++) {
+            sum += Math.pow(vals[i] - temp, 2);
+        }
+        temp = Math.sqrt(sum / l);
+
+        return temp * temp;
     }
 
     @Override
@@ -121,6 +190,21 @@ public class SixImpl implements Six {
 
     @Override
     public String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
-        return null;
+        if (lstOfArt.length == 0 || lstOf1stLetter.length == 0){
+            return "";
+        }
+
+        int sum;
+        String result = "";
+
+        for (String i : lstOf1stLetter) {
+            sum = 0;
+            for (String j : lstOfArt) {
+                sum += j.substring(0,1).equals(i) ? Integer.parseInt(j.replaceAll("[^0-9]","")) : 0;
+            }
+            result += " - (" + i + " : " + sum + ")";
+        }
+
+        return result.substring(3);
     }
 }
