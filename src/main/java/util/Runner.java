@@ -36,6 +36,8 @@ public class Runner {
             case ALONA:
                 impl8 = new kata.implementations.AlonaLutsenko.EightImplA();
                 impl7 = new kata.implementations.AlonaLutsenko.SevenImplA();
+                impl6 = new kata.implementations.AlonaLutsenko.SixImplA();
+                impl5 = new kata.implementations.AlonaLutsenko.FiveImplA();
                 break;
 
             case OKSANA:
