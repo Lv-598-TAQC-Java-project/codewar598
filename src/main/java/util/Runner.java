@@ -5,6 +5,7 @@ import kata.Five;
 import kata.Seven;
 import kata.Six;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 public class Runner {
@@ -35,12 +36,15 @@ public class Runner {
             case ALONA:
                 impl8 = new kata.implementations.AlonaLutsenko.EightImplA();
                 impl7 = new kata.implementations.AlonaLutsenko.SevenImplA();
+                impl6 = new kata.implementations.AlonaLutsenko.SixImplA();
+                impl5 = new kata.implementations.AlonaLutsenko.FiveImplA();
                 break;
 
             case OKSANA:
                 impl8 = new kata.implementations.OksanaKalynivska.EightImp();
                 impl7 = new kata.implementations.OksanaKalynivska.SevenImpl();
                 impl6 = new kata.implementations.OksanaKalynivska.SixImpl();
+                impl5 = new kata.implementations.OksanaKalynivska.FiveImpl();
                 break;
 
             case OSTAP:
@@ -85,22 +89,22 @@ public class Runner {
         double length = sc.readDouble();
         System.out.println("Please enter height of cuboid:");
         double height = sc.readDouble();
-        String result = String.valueOf(impl8.getVolumeOfCuboid(length,width,height));
-        System.out.println("Volume of cuboid = "+ result);
+        String result = String.valueOf(impl8.getVolumeOfCuboid(length, width, height));
+        System.out.println("Volume of cuboid = " + result);
     }
 
     public void runTask3() {
         System.out.println("Miles per gallon to kilometers per liter.\nEnter number of miles per gallon.");
         float mpg = sc.readFloat();
         String result = String.valueOf(impl8.mpgToKPM(mpg));
-        System.out.println("It will be "+ result+" kilometers per liter.");
+        System.out.println("It will be " + result + " kilometers per liter.");
     }
 
     public void runTask4() {
         System.out.println("To square root or no to square.\nEnter array of integers:");
         int[] numbersArray = sc.readArrayInt();
-        int [] result = impl8.squareOrSquareRoot(numbersArray);
-        System.out.println("Result: "+ Arrays.toString(result));
+        int[] result = impl8.squareOrSquareRoot(numbersArray);
+        System.out.println("Result: " + Arrays.toString(result));
     }
 
     public void runTask5() {
@@ -115,7 +119,7 @@ public class Runner {
         System.out.println("Convert a String to a Number!\nEnter numbers please!");
         String line = sc.readString();
         int result = impl8.stringToNumber(line);
-        System.out.println("Result: "+ result);
+        System.out.println("Result: " + result);
     }
 
     public void runTask7() {
@@ -123,15 +127,15 @@ public class Runner {
         double number = sc.readDouble();
         boolean result = impl8.am_i_wilson(number);
         if (result) {
-            System.out.println(number+ " is Wilson prime.");
-        }else System.out.println(number+" isn't Wilson prime.");
+            System.out.println(number + " is Wilson prime.");
+        } else System.out.println(number + " isn't Wilson prime.");
     }
 
     public void runTask8() {
         System.out.println("Formatting decimal places #0\nEnter a double value:");
         double value = sc.readDouble();
         double result = impl8.TwoDecimalPlaces(value);
-        System.out.println("Result of rounding: "+result);
+        System.out.println("Result of rounding: " + result);
     }
 
     public void runTask9() {
@@ -139,8 +143,8 @@ public class Runner {
         int[] numbers = sc.readArrayInt();
         System.out.println("Enter divisor:");
         int divisor = sc.readInt();
-        int [] result = impl8.divisibleBy(numbers,divisor);
-        System.out.println("Result: "+ Arrays.toString(result));
+        int[] result = impl8.divisibleBy(numbers, divisor);
+        System.out.println("Result: " + Arrays.toString(result));
     }
 
     public void runTask10() {
@@ -148,15 +152,15 @@ public class Runner {
         double[] donations = sc.readDoubleArray();
         System.out.println("Enter wanted average donation:");
         double averageDonation = sc.readDouble();
-        long result = impl7.newAvg(donations,averageDonation);
-        System.out.println("Result: "+result);
+        long result = impl7.newAvg(donations, averageDonation);
+        System.out.println("Result: " + result);
     }
 
     public void runTask11() {
         System.out.println("Sum of the first nth term of Series\nEnter a number:");
         int number = sc.readInt();
         String result = impl7.seriesSum(number);
-        System.out.println("Result: "+ result);
+        System.out.println("Result: " + result);
 
     }
 
@@ -167,18 +171,22 @@ public class Runner {
         int before = sc.readInt();
         System.out.println("Enter number of people after Vasya:");
         int after = sc.readInt();
-        int result = impl7.whereIsHe(numberOfPeople,before,after);
-        System.out.println("Number of possible positions: "+ result);
+        int result = impl7.whereIsHe(numberOfPeople, before, after);
+        System.out.println("Number of possible positions: " + result);
     }
 
     public void runTask13() {
         System.out.println("Build a pile of Cubes.\nEnter volume of building:");
         long number = sc.readLong();
         String result = String.valueOf(impl6.findNb(number));
-        System.out.println("Result: "+ result);
+        System.out.println("Result: " + result);
     }
 
     public void runTask14() {
+        System.out.println("Easy Balance Checking:\nEnter string:");
+        String input = sc.readString();
+        String result = impl6.balance(input);
+        System.out.println("Result: "+result );
 
     }
 
@@ -186,10 +194,17 @@ public class Runner {
         System.out.println("Floating-point Approximation (I)\nEnter double value:");
         double value = sc.readDouble();
         double result = impl6.f(value);
-        System.out.println("Result: "+result);
+        System.out.println("Result: " + result);
     }
 
     public void runTask16() {
+        System.out.println("Rainfall\nEnter a string (town):");
+        String town = sc.readString();
+        System.out.println("Enter a string:");
+        String input = sc.readString();
+        double result1 = impl6.mean(town, input);
+        double result2 = impl6.variance(town, input);
+        System.out.println(result1 + "\n" + result2);
     }
 
     public void runTask17() {
@@ -197,8 +212,7 @@ public class Runner {
         String resultsOfNBA = sc.readString();
         System.out.println("Enter team name:");
         String teamToFind = sc.readString();
-        String result = impl6.nbaCup(resultsOfNBA,teamToFind);
-
+        String result = impl6.nbaCup(resultsOfNBA, teamToFind);
         System.out.println(result);
     }
 
@@ -207,29 +221,53 @@ public class Runner {
         String[] stocklist = sc.readStringArray();
         System.out.println("Enter a list of categories in capital letters:");
         String[] categories = sc.readStringArray();
-        System.out.println(impl6.stockSummary(stocklist,categories));
+        System.out.println(impl6.stockSummary(stocklist, categories));
     }
 
     public void runTask19() {
-    }
-
-    public void runTask20() {
-    }
-   // Не відпрацьовує, хоча тести проходить.
-    public void runTask21() {
-        System.out.println("Please enter a number to calculate the number of trailing zeros \n"+
-                "in a factorial of an entered number.");
-        int number = sc.readInt();
-        String result = String.valueOf(impl5.zeros(number));
+        System.out.println("Artificial Rain\nEnter array of integers:");
+        int[] inputArrInt = sc.readArrayInt();
+        int result = impl5.artificialRain(inputArrInt);
         System.out.println("Result: "+ result);
     }
 
+    public void runTask20() {
+        System.out.println("Gap in Primes\nEnter (integer >= 2) which indicates the gap we are looking for:");
+        int gap = sc.readInt();
+        System.out.println("Enter (integer > 2) which gives the start of the search (m inclusive)");
+        int start = sc.readInt();
+        System.out.println("Enter (integer >= m) which gives the end of the search (n inclusive)");
+        int end = sc.readInt();
+        long[] result = impl5.gap(gap, start, end);
+        System.out.println("Result: "+ Arrays.toString(result));
+    }
+
+    public void runTask21() {
+        System.out.println("Please enter a number to calculate the number of trailing zeros \n" +
+                "in a factorial of an entered number.");
+        int number = sc.readInt();
+        String result = String.valueOf(impl5.zeros(number));
+        System.out.println("Result: " + result);
+    }
+
     public void runTask22() {
+        System.out.println("Perimeter of squares in a rectangle\nEnter Biginteger :");
+        BigInteger number = sc.readBigInteger();
+        BigInteger result = impl5.perimeter(number);
+        System.out.println("Result: "+ result);
     }
 
     public void runTask23() {
+        System.out.println("Which x for that sum?\nEnter double to see sum of numerical series");
+        double number = sc.readDouble();
+        double result = impl5.solveSum(number);
+        System.out.println("Result: "+ result);
     }
 
     public void runTask24() {
+        System.out.println("Find the smallest\nEnter long number to find the smallest number:");
+        long number = sc.readLong();
+        long[] result = impl5.smallest(number);
+        System.out.println("Result: "+ Arrays.toString(result));
     }
 }

@@ -6,36 +6,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SixImplA implements Six {
-    private static void updateMatchStatistics(int pointsA, int pointsB, boolean home, int[] stats) {
-        if (home) {
-            int temp = pointsA;
-            pointsA = pointsB;
-            pointsB = temp;
-        }
-
-        stats[3] += pointsA;
-        stats[4] += pointsB;
-
-        if (pointsA > pointsB) {
-            stats[0]++;
-        } else if (pointsA < pointsB) {
-            stats[1]++;
-        } else {
-            stats[2]++;
-        }
-    }
 
     @Override
     public long findNb(long m) {
-        for (int n = 1; ; n++) {
-            if (m > 0) {
-                double currCubeVol = Math.pow(n, 3);
-                m = m - (long) currCubeVol;
-            } else if (m == 0) {
-                return n - 1;
-            } else if (m < 0) {
-                return (-1);
-            }
+        long n = 1;
+        long volume = 0;
+        while (volume < m) {
+            volume += n * n * n;
+            n++;
+        }
+        if (volume == m) {
+            return n - 1;
+        } else {
+            return -1;
         }
     }
 
@@ -69,11 +52,6 @@ public class SixImplA implements Six {
 
     @Override
     public double mean(String town, String strng) {
-        return 0;
-    }
-
-    @Override
-    public double variance(String town, String strng) {
         if (town == null || town.length() == 0 || strng == null || strng.length() == 0) return -1;
         final String s = town + ":";
         final String[] a = strng.split("\n");
@@ -95,6 +73,42 @@ public class SixImplA implements Six {
         }
 
         return sum / l;
+    }
+
+    @Override
+    public double variance(String town, String strng) {
+        if (town == null || town.length() == 0 || strng == null || strng.length() == 0) return -1;
+        final String s = town + ":";
+        final String[] a = strng.split("\n");
+        String[] str1 = null;
+        double[] vals;
+        int l;
+        double temp;
+        double sum = 0;
+
+        for (String str : a) {
+            if (str.startsWith(s)) {
+                str1 = str.split(":")[1].split(",");
+                break;
+            }
+        }
+        if (str1 == null || str1.length == 0) return -1;
+
+        l = str1.length;
+        vals = new double[l];
+        for (int i = 0; i < l; i++) {
+            vals[i] = temp = Double.parseDouble(str1[i].split(" ")[1]);
+            sum += temp;
+        }
+
+        temp = sum / l;
+        sum = 0;
+        for (int i = 0; i < l; i++) {
+            sum += Math.pow(vals[i] - temp, 2);
+        }
+        temp = Math.sqrt(sum / l);
+
+        return temp * temp;
     }
 
     @Override
