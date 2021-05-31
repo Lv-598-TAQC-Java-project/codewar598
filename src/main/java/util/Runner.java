@@ -181,6 +181,10 @@ public class Runner {
     }
 
     public void runTask14() {
+        System.out.println("Easy Balance Checking:\nEnter string:");
+        String input = sc.readString();
+        String result = impl6.balance(input);
+        System.out.println("Result: "+result );
 
     }
 
@@ -192,8 +196,13 @@ public class Runner {
     }
 
     public void runTask16() {
-
-
+        System.out.println("Rainfall\nEnter a string (town):");
+        String town = sc.readString();
+        System.out.println("Enter a string:");
+        String input = sc.readString();
+        double result1 = impl6.mean(town, input);
+        double result2 = impl6.variance(town, input);
+        System.out.println(result1 + "\n" + result2);
     }
 
     public void runTask17() {
@@ -202,7 +211,6 @@ public class Runner {
         System.out.println("Enter team name:");
         String teamToFind = sc.readString();
         String result = impl6.nbaCup(resultsOfNBA, teamToFind);
-
         System.out.println(result);
     }
 
@@ -215,12 +223,23 @@ public class Runner {
     }
 
     public void runTask19() {
+        System.out.println("Artificial Rain\nEnter array of integers:");
+        int[] inputArrInt = sc.readArrayInt();
+        int result = impl5.artificialRain(inputArrInt);
+        System.out.println("Result: "+ result);
     }
 
     public void runTask20() {
+        System.out.println("Gap in Primes\nEnter (integer >= 2) which indicates the gap we are looking for:");
+        int gap = sc.readInt();
+        System.out.println("Enter (integer > 2) which gives the start of the search (m inclusive)");
+        int start = sc.readInt();
+        System.out.println("Enter (integer >= m) which gives the end of the search (n inclusive)");
+        int end = sc.readInt();
+        long[] result = impl5.gap(gap, start, end);
+        System.out.println("Result: "+ Arrays.toString(result));
     }
 
-    // Не відпрацьовує, хоча тести проходить.
     public void runTask21() {
         System.out.println("Please enter a number to calculate the number of trailing zeros \n" +
                 "in a factorial of an entered number.");
@@ -230,12 +249,23 @@ public class Runner {
     }
 
     public void runTask22() {
-
+        System.out.println("Perimeter of squares in a rectangle\nEnter Biginteger :");
+        BigInteger number = sc.readBigInteger();
+        BigInteger result = impl5.perimeter(number);
+        System.out.println("Result: "+ result);
     }
 
     public void runTask23() {
+        System.out.println("Which x for that sum?\nEnter double to see sum of numerical series");
+        double number = sc.readDouble();
+        double result = impl5.solveSum(number);
+        System.out.println("Result: "+ result);
     }
 
     public void runTask24() {
+        System.out.println("Find the smallest\nEnter long number to find the smallest number:");
+        long number = sc.readLong();
+        long[] result = impl5.smallest(number);
+        System.out.println("Result: "+ Arrays.toString(result));
     }
 }

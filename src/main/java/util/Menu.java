@@ -15,15 +15,10 @@ public class Menu {
     }
 
     public void showStudentList() {
-        System.out.println("List of students: \n" +
-                "1. Orest Torskyi\n" +
-                "2. Alyona Lutsenko\n" +
-                "3. Oksana Kalynivska\n" +
-                "4. Ostap Nadiak\n" +
-                "5. Dmytro Nahornyy\n" +
-                "6. Victoria Badenko\n" +
-                "7. Elvira Stepaniuk \n"+
-                "8. Viktoria Skikun");
+        UserNames[] userNames = UserNames.values();
+        for (UserNames u: userNames) {
+            System.out.println(u.getId()+". "+ u.getStudentName());
+        }
     }
 
     public void showTasks() {
