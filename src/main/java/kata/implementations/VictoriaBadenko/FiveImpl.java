@@ -69,11 +69,27 @@ public class FiveImpl implements Five {
         double normal = (2 * m) + 1;
         double radical = Math.sqrt(4 * m + 1);
         double divisor = 2 * m;
-        return (normal - radical)/divisor;
+        return (normal - radical) / divisor;
     }
 
     @Override
     public long[] smallest(long n) {
-        return new long[0];
+        long[] result = new long[]{n, 0, 0};
+        StringBuilder smallest = new StringBuilder("" + n);
+        for (int i = 0; i < smallest.length(); i++) {
+            for (int j = 0; j < smallest.length(); j++) {
+                if (i == j) {
+                    continue;
+                }
+                StringBuilder temp = new StringBuilder(smallest);
+                char target = temp.charAt(i);
+                temp.deleteCharAt(i);
+                temp.insert(j, target);
+                if (Long.parseLong(temp.toString()) < result[0]) {
+                    result = new long[]{Long.parseLong(temp.toString()), i, j};
+                }
+            }
+        }
+        return result;
     }
 }
