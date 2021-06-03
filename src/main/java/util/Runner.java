@@ -256,11 +256,23 @@ public class Runner {
     }
 
 	public void runTask22() {
+        System.out.println("Perimeter of squares in a rectangle\nEnter Biginteger :");
+        BigInteger number = sc.readBigInteger();
+        BigInteger result = impl5.perimeter(number);
+        System.out.println("Result: "+ result);
 	}
 
 	public void runTask23() {
+        System.out.println("Which x for that sum?\nEnter double to see sum of numerical series");
+        double number = sc.readDouble();
+        double result = impl5.solveSum(number);
+        System.out.println("Result: "+ result);
 	}
 
 	public void runTask24() {
+        System.out.println("Find the smallest\nEnter long number to find the smallest number:");
+        long number = sc.readLong();
+        long[] result = impl5.smallest(number);
+        System.out.println("Result: "+ Arrays.toString(result));
 	}
 }
