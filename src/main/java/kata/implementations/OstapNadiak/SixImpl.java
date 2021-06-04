@@ -20,12 +20,30 @@ public class SixImpl implements Six {
 
     @Override
     public String balance(String book) {
-        return null;
+        String list = book.replaceAll("([^\\n. \\da-zA-Z])", "");
+        String[] elements = list.split("[\\n]+");
+        double current = Double.parseDouble(elements[0]);
+        double summary = 0;
+        int counter = 0;
+        StringBuilder result = new StringBuilder();
+        result.append("Original Balance: ").append(elements[0]);
+
+        for (int i = 1; i < elements.length; i++) {
+            counter++;
+            String[] line = elements[i].split("[ ]+");
+            current -= Double.parseDouble(line[2]);
+            summary += Double.parseDouble(line[2]);
+            String res = String.format("\\r\\n%s %s %s Balance %.2f", line[0], line[1], line[2], current);
+            result.append(res);
+        }
+
+        result.append(String.format("\\r\\nTotal expense  %.2f\\r\\nAverage expense  %.2f", summary, summary / counter));
+        return result.toString();
     }
 
     @Override
     public double f(double x) {
-        return 0;
+        return x / (1 + Math.sqrt(x + 1));
     }
 
     @Override
@@ -45,6 +63,24 @@ public class SixImpl implements Six {
 
     @Override
     public String stockSummary(String[] lstOfArt, String[] lstOf1stLetter) {
-        return null;
+
+        if (lstOfArt.length == 0 || lstOf1stLetter.length == 0){
+            return "";
+        }
+
+        int sum;
+        String result = "";
+
+        for (String i : lstOf1stLetter) {
+            sum = 0;
+            for (String j : lstOfArt) {
+                if (j.substring(0,1).equals(i)){
+                    sum += Integer.parseInt((j.replaceAll("[^0-9]", "")));
+                }
+            }
+            result += " - (" + i + " : " + sum + ")";
+        }
+        return result;
+
     }
 }
