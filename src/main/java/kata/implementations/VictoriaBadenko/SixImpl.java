@@ -3,6 +3,7 @@ package kata.implementations.VictoriaBadenko;
 import kata.Six;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class SixImpl implements Six {
     @Override
@@ -28,10 +29,10 @@ public class SixImpl implements Six {
             String[] line = arr[i].split("[ ]+");
             current -= Double.parseDouble(line[2]);
             total += Double.parseDouble(line[2]);
-            String s = String.format("\\r\\n%s %s %s Balance %.2f", line[0], line[1], line[2], current);
+            String s = String.format(Locale.US, "\\r\\n%s %s %s Balance %.2f", line[0], line[1], line[2], current);
             result.append(s);
         }
-        result.append(String.format("\\r\\nTotal expense  %.2f\\r\\nAverage expense  %.2f", total, total / count));
+        result.append(String.format(Locale.US, "\\r\\nTotal expense  %.2f\\r\\nAverage expense  %.2f", total, total / count));
         return result.toString();
     }
 
