@@ -27,7 +27,7 @@ public class SevenImpl implements Seven {
         return String.format("%.2f", sum);
     }
 
-    public int whereIsHe(int p, int bef, int aft) {
+    public int whereIsHe(int p, int aft, int bef) {
         int count = 0;
         while (bef >= 0 && aft <= (p - 1)) {
             if (bef + aft > (p - 1)) {
