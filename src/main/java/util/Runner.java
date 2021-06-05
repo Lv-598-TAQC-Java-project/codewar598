@@ -47,20 +47,20 @@ public class Runner {
                 impl5 = new kata.implementations.OksanaKalynivska.FiveImpl();
                 break;
 
-		case OSTAP:
-			impl8 = new kata.implementations.OstapNadiak.EightImpl();
-			impl7 = new kata.implementations.OstapNadiak.SevenImpl();
-			impl6 = new kata.implementations.OstapNadiak.SixImpl();
-			impl5 = new kata.implementations.OstapNadiak.FiveImpl();
-			break;
+            case OSTAP:
+                impl8 = new kata.implementations.OstapNadiak.EightImpl();
+                impl7 = new kata.implementations.OstapNadiak.SevenImpl();
+                impl6 = new kata.implementations.OstapNadiak.SixImpl();
+                impl5 = new kata.implementations.OstapNadiak.FiveImpl();
+                break;
 
 
-		case DMYTRO:
-			impl8 = new kata.implementations.DmytroNahornyy.EightImpl();
-			impl7 = new kata.implementations.DmytroNahornyy.SevenImpl();
-			impl6 = new kata.implementations.DmytroNahornyy.SixImpl();
-			impl5 = new kata.implementations.DmytroNahornyy.FiveImpl();
-			break;
+            case DMYTRO:
+                impl8 = new kata.implementations.DmytroNahornyy.EightImpl();
+                impl7 = new kata.implementations.DmytroNahornyy.SevenImpl();
+                impl6 = new kata.implementations.DmytroNahornyy.SixImpl();
+                impl5 = new kata.implementations.DmytroNahornyy.FiveImpl();
+                break;
             case VIKTORIA:
                 impl8 = new kata.implementations.VictoriaBadenko.EightImpl();
                 impl7 = new kata.implementations.VictoriaBadenko.SevenImpl();
@@ -69,6 +69,7 @@ public class Runner {
                 break;
             case ELVIRA:
                 impl8 = new kata.implementations.ElviraStepaniuk.EightImpl();
+                impl7 = new kata.implementations.ElviraStepaniuk.SevenImpl();
                 break;
             case VIKTORIASKIKUN:
                 break;
@@ -191,7 +192,7 @@ public class Runner {
         System.out.println("Easy Balance Checking:\nEnter string:");
         String input = sc.readString();
         String result = impl6.balance(input);
-        System.out.println("Result: "+result );
+        System.out.println("Result: " + result);
 
     }
 
@@ -233,7 +234,7 @@ public class Runner {
         System.out.println("Artificial Rain\nEnter array of integers:");
         int[] inputArrInt = sc.readArrayInt();
         int result = impl5.artificialRain(inputArrInt);
-        System.out.println("Result: "+ result);
+        System.out.println("Result: " + result);
     }
 
     public void runTask20() {
@@ -244,7 +245,7 @@ public class Runner {
         System.out.println("Enter (integer >= m) which gives the end of the search (n inclusive)");
         int end = sc.readInt();
         long[] result = impl5.gap(gap, start, end);
-        System.out.println("Result: "+ Arrays.toString(result));
+        System.out.println("Result: " + Arrays.toString(result));
     }
 
     public void runTask21() {
@@ -255,24 +256,24 @@ public class Runner {
         System.out.println("Result: " + result);
     }
 
-	public void runTask22() {
+    public void runTask22() {
         System.out.println("Perimeter of squares in a rectangle\nEnter Biginteger :");
         BigInteger number = sc.readBigInteger();
         BigInteger result = impl5.perimeter(number);
-        System.out.println("Result: "+ result);
-	}
+        System.out.println("Result: " + result);
+    }
 
-	public void runTask23() {
+    public void runTask23() {
         System.out.println("Which x for that sum?\nEnter double to see sum of numerical series");
         double number = sc.readDouble();
         double result = impl5.solveSum(number);
-        System.out.println("Result: "+ result);
-	}
+        System.out.println("Result: " + result);
+    }
 
-	public void runTask24() {
+    public void runTask24() {
         System.out.println("Find the smallest\nEnter long number to find the smallest number:");
         long number = sc.readLong();
         long[] result = impl5.smallest(number);
-        System.out.println("Result: "+ Arrays.toString(result));
-	}
+        System.out.println("Result: " + Arrays.toString(result));
+    }
 }
