@@ -11,7 +11,7 @@ public class SeriesSumTest {
 
         String expectedResult ="1.49";
         String actualResult = impl7.seriesSum(4);
-        Assert.assertEquals(actualResult, expectedResult);
+        Assert.assertEquals(expectedResult, actualResult);
     }
 
     @Test(dataProvider = "impl7", dataProviderClass = DataProvider.class)
