@@ -2,6 +2,8 @@ package kata.implementations.DmytroNahornyy;
 
 import kata.Six;
 
+import java.util.Locale;
+
 public class SixImpl implements Six {
     @Override
     public long findNb(long m) {
@@ -32,11 +34,11 @@ public class SixImpl implements Six {
             String[] line = array[i].split("[ ]+");
             current -= Double.parseDouble(line[2]);
             ttl += Double.parseDouble(line[2]);
-            String res = String.format("\\r\\n%s %s %s Balance %.2f", line[0], line[1], line[2], current);
+            String res = String.format(Locale.US,"\\r\\n%s %s %s Balance %.2f", line[0], line[1], line[2], current);
             result.append(res);
         }
 
-        result.append(String.format("\\r\\nTotal expense  %.2f\\r\\nAverage expense  %.2f", ttl, ttl / counter));
+        result.append(String.format(Locale.US,"\\r\\nTotal expense  %.2f\\r\\nAverage expense  %.2f", ttl, ttl / counter));
         return result.toString();
     }
 
