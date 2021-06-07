@@ -67,9 +67,9 @@ public class Runner {
                 impl6 = new kata.implementations.VictoriaBadenko.SixImpl();
                 impl5 = new kata.implementations.VictoriaBadenko.FiveImpl();
                 break;
-            case ELVIRA:
-                impl8 = new kata.implementations.ElviraStepaniuk.EightImpl();
-                break;
+//            case ELVIRA:
+//                impl8 = new kata.implementations.ElviraStepaniuk.EightImpl();
+//                break;
             case VIKTORIASKIKUN:
                 break;
 
