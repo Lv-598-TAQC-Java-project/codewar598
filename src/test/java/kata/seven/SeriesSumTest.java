@@ -9,9 +9,9 @@ public class SeriesSumTest {
     @Test(dataProvider = "impl7", dataProviderClass = DataProvider.class)
     public void SeriesSum(Seven impl7) {
 
-        String expectedResult ="1.61";
+        String expectedResult ="1.49";
         String actualResult = impl7.seriesSum(4);
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test(dataProvider = "impl7", dataProviderClass = DataProvider.class)
@@ -31,7 +31,7 @@ public class SeriesSumTest {
     @Test(dataProvider = "impl7", dataProviderClass = DataProvider.class)
     public void SeriesSumBig(Seven impl7) {
 
-        String expectedResult ="7.96";
+        String expectedResult ="7.81";
         String actualResult = impl7.seriesSum(654546546);
         Assert.assertEquals(expectedResult, actualResult);
     }

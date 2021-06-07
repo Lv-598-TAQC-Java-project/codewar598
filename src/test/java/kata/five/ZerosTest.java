@@ -12,6 +12,6 @@ public class ZerosTest {
     public void testZeros(Five impl) {
             int expectedResult = 2;
             int actualResult = impl.zeros(14);
-        Assert.assertEquals(expectedResult,actualResult);
+        Assert.assertEquals(actualResult,expectedResult);
     }
 }

@@ -14,8 +14,11 @@ public class SixImpl implements Six {
             n++;
             sum += Math.pow(n,3);
         }
-
-        return n;
+        if (sum == m)
+        {
+            return n;
+        }
+        return -1;
     }
 
     @Override
