@@ -7,8 +7,7 @@ public enum UserNames {
     OSTAP(4, "Ostap"),
     DMYTRO(5, "Dmytro"),
     VIKTORIA(6, "Viktoria"),
-    ELVIRA(7, "Elvira"),
-    VIKTORIASKIKUN(8, "ViktoriaSkikun");
+    VIKTORIASKIKUN(7, "ViktoriaSkikun");
 
 
 
