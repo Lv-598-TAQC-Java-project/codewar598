@@ -33,6 +33,7 @@ public class Runner {
                 impl6 = new kata.implementations.OrestTorskyi.SixImpl();
                 impl5 = new kata.implementations.OrestTorskyi.FiveImpl();
                 break;
+
             case ALONA:
                 impl8 = new kata.implementations.AlonaLutsenko.EightImplA();
                 impl7 = new kata.implementations.AlonaLutsenko.SevenImplA();
@@ -61,16 +62,21 @@ public class Runner {
                 impl6 = new kata.implementations.DmytroNahornyy.SixImpl();
                 impl5 = new kata.implementations.DmytroNahornyy.FiveImpl();
                 break;
+
             case VIKTORIA:
                 impl8 = new kata.implementations.VictoriaBadenko.EightImpl();
                 impl7 = new kata.implementations.VictoriaBadenko.SevenImpl();
                 impl6 = new kata.implementations.VictoriaBadenko.SixImpl();
                 impl5 = new kata.implementations.VictoriaBadenko.FiveImpl();
                 break;
+
 //            case ELVIRA:
 //                impl8 = new kata.implementations.ElviraStepaniuk.EightImpl();
 //                break;
+
             case VIKTORIASKIKUN:
+                impl8 = new kata.implementations.ViktoriaSkikun.EightImpl();
+                impl7 = new kata.implementations.ViktoriaSkikun.SevenImpl();
                 break;
 
         }

@@ -10,6 +10,7 @@ public class DataProvider {
                 new kata.implementations.VictoriaBadenko.EightImpl(),
                 new kata.implementations.AlonaLutsenko.EightImplA(),
                // new kata.implementations.ElviraStepaniuk.EightImpl(),
+                new kata.implementations.ViktoriaSkikun.EightImpl(),
                 new kata.implementations.OstapNadiak.EightImpl()};
     }
 
@@ -22,7 +23,9 @@ public class DataProvider {
                 new kata.implementations.VictoriaBadenko.SevenImpl(),
                 new kata.implementations.AlonaLutsenko.SevenImplA(),
                 //new kata.implementations.ElviraStepaniuk.SevenImpl(),
+                new kata.implementations.ViktoriaSkikun.SevenImpl(),
                 new kata.implementations.OstapNadiak.SevenImpl()};
+
     }
 
     @org.testng.annotations.DataProvider(name = "impl6")
