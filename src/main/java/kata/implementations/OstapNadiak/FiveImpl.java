@@ -12,11 +12,11 @@ public class FiveImpl implements Five {
     @Override
     public int artificialRain(int[] v) {
 
-        if (v.length == 1) {
-            return 1;
-        }
-        else if (v.length == 0) {
+        if (v[0] == 0){
             return 0;
+        }
+        else if (v.length == 1) {
+            return 1;
         }
 
         int max = 0;
@@ -72,12 +72,14 @@ public class FiveImpl implements Five {
         }
         return primes;
     }
-    public static int getFactorial(int f) {
-        int result = 1;
-        for (int i = 1; i <= f; i++) {
-            result = result * i;
+    public static long factorial( int numero ) {
+        long fact = 1;
+        for( int i = 1; i <= numero; i++ ) {
+            fact *= i;
         }
-        return result;
+
+        return fact;
+
     }
 
     public static int getCountsOfDigits(long number) {
@@ -102,8 +104,9 @@ public class FiveImpl implements Five {
     public int zeros(int n) {
         int count=0;
         long number;
-        number = getFactorial(n);
-        for (int i = 0; i<getCountsOfDigits(number); i++){
+        number = factorial(n);
+        int j = getCountsOfDigits(number);
+        for (int i = 0; i<j; i++){
             if (number%10 == 0){
                 count++;
                 number = number/10;
@@ -117,6 +120,10 @@ public class FiveImpl implements Five {
 
     @Override
     public BigInteger perimeter(BigInteger n) {
+        if (n.intValue()<0){
+            return n = BigInteger.valueOf(0);
+
+        }
         int[] fibonaciNumbers =  fib(n.intValue());
         int sumOfPerimetres = 0;
         for (int i =0; i< (n.intValue()+2);i++){

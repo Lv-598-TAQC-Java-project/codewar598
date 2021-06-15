@@ -2,6 +2,8 @@ package kata.implementations.OksanaKalynivska;
 
 import kata.Six;
 
+import java.util.Locale;
+
 public class SixImpl implements Six {
 
     @Override
@@ -33,11 +35,11 @@ public class SixImpl implements Six {
             genSum += priceOfEl;
             firstLine -= priceOfEl;
             sb.append(
-                    String.format("%s %s %.2f Balance %.2f\\r\\n", arrOfCateg[0], arrOfCateg[1], priceOfEl, firstLine));
+                    String.format(Locale.US, "%s %s %.2f Balance %.2f\\r\\n", arrOfCateg[0], arrOfCateg[1], priceOfEl, firstLine));
 
         }
-        sb.append(String.format("Total expense  %.2f\\r\\n", genSum));
-        sb.append(String.format("Average expense  %.2f", genSum / (lines.length - 1)));
+        sb.append(String.format(Locale.US, "Total expense  %.2f\\r\\n", genSum));
+        sb.append(String.format(Locale.US, "Average expense  %.2f", genSum / (lines.length - 1)));
         return sb.toString();
     }
 
