@@ -2,6 +2,7 @@ package util;
 
 
 
+import java.io.InputStream;
 import java.math.BigInteger;
 
 public class ConsoleScanner implements Scanner {
@@ -76,6 +77,7 @@ public class ConsoleScanner implements Scanner {
     }
 
     public String readString() {
+        scanner = new java.util.Scanner(System.in);
         while (true) {
             if (scanner.hasNextLine()) {
                 return scanner.nextLine();

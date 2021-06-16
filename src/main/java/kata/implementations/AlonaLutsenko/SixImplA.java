@@ -3,6 +3,7 @@ package kata.implementations.AlonaLutsenko;
 import kata.Six;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class SixImplA implements Six {
@@ -37,11 +38,11 @@ public class SixImplA implements Six {
             String[] line = array[i].split("[ ]+");
             current -= Double.parseDouble(line[2]);
             ttl += Double.parseDouble(line[2]);
-            String res = String.format("\\r\\n%s %s %s Balance %.2f", line[0], line[1], line[2], current);
+            String res = String.format(Locale.US, "\\r\\n%s %s %s Balance %.2f", line[0], line[1], line[2], current);
             result.append(res);
         }
 
-        result.append(String.format("\\r\\nTotal expense  %.2f\\r\\nAverage expense  %.2f", ttl, ttl / counter));
+        result.append(String.format(Locale.US, "\\r\\nTotal expense  %.2f\\r\\nAverage expense  %.2f", ttl, ttl / counter));
         return result.toString();
     }
 

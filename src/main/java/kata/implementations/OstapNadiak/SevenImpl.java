@@ -25,17 +25,13 @@ public class SevenImpl implements Seven {
 
     @Override
     public String seriesSum(int n) {
-        double sum = 1;
-        for (double i=1;i<n; i++) {
+        double sum = 0;
+        for (double i=1;i<=n; i++) {
             if (n==0){
                 sum = 0;
             }
-            else if ( n ==1){
-                System.out.println(sum);
-            }
-            else{
-
-                sum = sum + 1/(3*i);
+            else {
+                sum += 1/(1+(i-1)*3d);
             }
         }
         BigDecimal result = new BigDecimal(sum);

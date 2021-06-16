@@ -45,6 +45,9 @@ public class EightImpl implements Eight {
     public int[] countPositivesSumNegatives(int[] input) {
         int count;
         int sum;
+        if (input.length == 0){
+            return new int[0];
+        }
         int[] toShow = new int[2];
         sum =0;
         count = 0;
