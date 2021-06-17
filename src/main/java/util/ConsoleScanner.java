@@ -2,6 +2,7 @@ package util;
 
 
 
+import java.io.InputStream;
 import java.math.BigInteger;
 
 public class ConsoleScanner implements Scanner {

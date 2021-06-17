@@ -20,7 +20,7 @@ public class MPGtoKPLTest {
     }
     @Test(dataProvider = "impl8", dataProviderClass = DataProvider.class)
     public void testMPGtoLPLBIG(Eight impl8) {
-        float expectedResult = 3212165;
+        float expectedResult = (float) 402549.44;
         float actualResult = impl8.mpgToKPM((float) 1137125.82);
         Assert.assertEquals(expectedResult, actualResult);
     }

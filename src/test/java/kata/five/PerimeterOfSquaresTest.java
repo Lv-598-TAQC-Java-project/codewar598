@@ -8,10 +8,6 @@ import kata.DataProvider;
 import java.math.BigInteger;
 
 public class PerimeterOfSquaresTest {
-    @Test
-    public void test1 () {
-        Assert.assertTrue(true);
-    }
 
     @Test(dataProvider = "impl5", dataProviderClass = DataProvider.class)
     public void perimeterOfSquaresBasic(Five impl5) {
@@ -26,8 +22,8 @@ public class PerimeterOfSquaresTest {
     }
 
     @Test(dataProvider = "impl5", dataProviderClass = DataProvider.class)
-    public void perimeterOfSquaresNegativeValue(Five impl5) {
-        BigInteger numb = BigInteger.valueOf(-1);
-        Assert.assertEquals("0", impl5.perimeter(numb).toString());
+    public void perimeterOfSquares(Five impl5) {
+        BigInteger numb = BigInteger.valueOf(30);
+        Assert.assertEquals("14098308", impl5.perimeter(numb).toString());
     }
 }
