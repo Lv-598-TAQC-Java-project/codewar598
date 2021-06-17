@@ -2,6 +2,8 @@ package kata.implementations.OrestTorskyi;
 
 import kata.Seven;
 
+import java.util.Locale;
+
 public class SevenImpl implements Seven {
 
 
@@ -24,7 +26,7 @@ public class SevenImpl implements Seven {
             sum += 1 / following;
             following += 3;
         }
-        return String.format("%.2f", sum);
+        return String.format(Locale.US,"%.2f", sum);
     }
 
     public int whereIsHe(int p, int aft, int bef) {

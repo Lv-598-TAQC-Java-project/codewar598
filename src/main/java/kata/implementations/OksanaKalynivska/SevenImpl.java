@@ -2,6 +2,8 @@ package kata.implementations.OksanaKalynivska;
 
 import kata.Seven;
 
+import java.util.Locale;
+
 public class SevenImpl implements Seven {
 
 	@Override
@@ -30,7 +32,7 @@ public class SevenImpl implements Seven {
 			sum += Double.valueOf(1) / Double.valueOf(i * 3 + 1);
 		}
 
-		return String.format("%.2f", sum);
+		return String.format(Locale.US,"%.2f", sum);
 	}
 
 	@Override

@@ -2,6 +2,8 @@ package kata.implementations.DmytroNahornyy;
 
 import kata.Seven;
 
+import java.util.Locale;
+
 public class SevenImpl implements Seven{
 
 	@Override
@@ -31,7 +33,7 @@ public class SevenImpl implements Seven{
 								result += dod;
 		        }
 		        
-				res = String.format("%.2f", result);	    
+				res = String.format(Locale.US,"%.2f", result);
 				return res;
 	}
 

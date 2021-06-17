@@ -84,6 +84,7 @@ public class Menu {
             switch (task) {
                 case 1:
                     runner.runTaskOne();
+                    break;
                 case 2:
                     runner.runTask2();
                     break;

@@ -55,7 +55,6 @@ public class Runner {
                 impl5 = new kata.implementations.OstapNadiak.FiveImpl();
                 break;
 
-
             case DMYTRO:
                 impl8 = new kata.implementations.DmytroNahornyy.EightImpl();
                 impl7 = new kata.implementations.DmytroNahornyy.SevenImpl();
@@ -77,10 +76,10 @@ public class Runner {
             case VIKTORIASKIKUN:
                 impl8 = new kata.implementations.ViktoriaSkikun.EightImpl();
                 impl7 = new kata.implementations.ViktoriaSkikun.SevenImpl();
+                impl6 = new kata.implementations.ViktoriaSkikun.SixImpl();
+                impl5 = new kata.implementations.ViktoriaSkikun.FiveImpl();
                 break;
-
         }
-
     }
 
     public void runTaskOne() {
