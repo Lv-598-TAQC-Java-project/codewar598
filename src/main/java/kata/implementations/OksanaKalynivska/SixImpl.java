@@ -26,7 +26,7 @@ public class SixImpl implements Six {
         String[] lines = book.split("\n");
         double firstLine = Double.valueOf(lines[0].replaceAll("[^\\d.]", ""));
 
-        sb.append(String.format("Original Balance: %.2f\\r\\n", firstLine));
+        sb.append(String.format(Locale.US,"Original Balance: %.2f\\r\\n", firstLine));
         for (int i = 1; i < lines.length; i++) {
             String categ = lines[i].replaceAll("[^A-Za-z0-9 .]", "").replaceAll("\\s+", " ");
             String[] arrOfCateg = categ.split(" ");
