@@ -2,6 +2,8 @@ package kata.implementations.AlonaLutsenko;
 
 import kata.Seven;
 
+import java.util.Locale;
+
 public class SevenImplA implements Seven {
     @Override
     public long newAvg(double[] arr, double navg) {
@@ -27,7 +29,7 @@ public class SevenImplA implements Seven {
         for (int i = 0; i < n; i++)
             sum += 1.0 / (1 + 3 * i);
 
-        return String.format("%.2f", sum);
+        return String.format(Locale.US,"%.2f", sum);
     }
 
     @Override
