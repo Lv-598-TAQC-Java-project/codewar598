@@ -2,6 +2,7 @@ package kata.implementations.VictoriaBadenko;
 
 import kata.Seven;
 
+import java.util.Locale;
 import java.util.stream.DoubleStream;
 
 public class SevenImpl implements Seven {
@@ -19,7 +20,7 @@ public class SevenImpl implements Seven {
         for (int i = 0; i < n; i++)
             sum += 1.0 / (1 + 3 * i);
 
-        return String.format("%.2f", sum);
+        return String.format(Locale.US,"%.2f", sum);
     }
 
     public int whereIsHe(int p, int bef, int aft) {

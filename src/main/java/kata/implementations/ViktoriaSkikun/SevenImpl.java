@@ -2,6 +2,8 @@ package kata.implementations.ViktoriaSkikun;
 
 import kata.Seven;
 
+import java.util.Locale;
+
 public class SevenImpl implements Seven {
 
     public long newAvg(double[] arr, double navg) {
@@ -35,7 +37,7 @@ public class SevenImpl implements Seven {
             sum += 1 / denominator;
             denominator += 3;
         }
-        return String.format("%.2f", sum);
+        return String.format(Locale.US,"%.2f", sum);
     }
 
     public int whereIsHe(int p, int bef, int aft) {
