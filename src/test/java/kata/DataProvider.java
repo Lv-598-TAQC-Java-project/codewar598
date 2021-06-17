@@ -9,7 +9,7 @@ public class DataProvider {
                 new kata.implementations.OksanaKalynivska.EightImp(),
                 new kata.implementations.VictoriaBadenko.EightImpl(),
                 new kata.implementations.AlonaLutsenko.EightImplA(),
-               // new kata.implementations.ElviraStepaniuk.EightImpl(),
+                // new kata.implementations.ElviraStepaniuk.EightImpl(),
                 new kata.implementations.ViktoriaSkikun.EightImpl(),
                 new kata.implementations.OstapNadiak.EightImpl()};
     }
@@ -36,7 +36,8 @@ public class DataProvider {
                 new kata.implementations.OksanaKalynivska.SixImpl(),
                 new kata.implementations.VictoriaBadenko.SixImpl(),
                 new kata.implementations.AlonaLutsenko.SixImplA(),
-               // new kata.implementations.ElviraStepaniuk.SixImpl(),
+                // new kata.implementations.ElviraStepaniuk.SixImpl(),
+                new kata.implementations.ViktoriaSkikun.SixImpl(),
                 new kata.implementations.OstapNadiak.SixImpl()};
     }
 
@@ -49,6 +50,7 @@ public class DataProvider {
                 new kata.implementations.VictoriaBadenko.FiveImpl(),
                 new kata.implementations.AlonaLutsenko.FiveImplA(),
                 //new kata.implementations.ElviraStepaniuk.FiveImpl(),
+                new kata.implementations.ViktoriaSkikun.FiveImpl(),
                 new kata.implementations.OstapNadiak.FiveImpl()};
     }
 }
